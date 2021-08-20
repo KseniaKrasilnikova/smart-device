@@ -3,11 +3,10 @@
   width: 100%;
   height: 878px;
 
-  background-color: #1B2D37;
-
+  background-color: #1b2d37;
 }
 
-.intro:before {
+.intro::before {
   content: "";
   background-image: url("../img/bg-splashes.png");
   position: absolute;

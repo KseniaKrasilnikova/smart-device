@@ -4,19 +4,49 @@
   margin: 0;
   padding: 0 35px 0 0;
   list-style: none;
+
+  @media (max-width: $tablet-width-only) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 80px;
+    padding: 0;
+  }
 }
 
 .main-contacts__link {
   display: flex;
   flex-direction: row;
-  //justify-content: space-between;
   width: 222px;
 
   color: #ffffff;
   line-height: 18px;
+
+  @media (max-width: $tablet-width-only) {
+    width: 100%;
+  }
 }
 
 .main-contacts__icon {
+  display: flex;
+
   padding: 0 22px 0 0;
+
+  @media (max-width: $tablet-width-only) {
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 19px;
+    height: 18px;
+  }
+}
+
+.main-contacts__text {
+  @media (max-width: $tablet-width-only) {
+    display: none;
+  }
 }
 

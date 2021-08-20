@@ -16,4 +16,8 @@
   background-color: transparent;
   border: 1px solid #ffffff;
   border-radius: 6px;
+
+  @media (max-width: $tablet-width-only) {
+    display: none;
+  }
 }

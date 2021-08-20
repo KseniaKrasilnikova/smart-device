@@ -10,6 +10,10 @@
 
   height: 52px;
   padding-top: 34px;
+
+  @media (max-width: $tablet-width-only) {
+    padding-top: 21px;
+  }
 }
 
 .nav-bar__items {
