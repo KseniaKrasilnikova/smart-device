@@ -1,3 +1,12 @@
+.logo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 202px;
+}
+
 .logo__sign {
   display: flex;
   flex-direction: column;
@@ -11,7 +20,6 @@
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-size: 25px;
   line-height: 29.3px;
-
   color: #ffffff;
 }
 
@@ -19,6 +27,5 @@
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 12px;
   line-height: 14.06px;
-
   color: #788891;
 }

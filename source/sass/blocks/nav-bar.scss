@@ -11,3 +11,10 @@
   height: 52px;
   padding-top: 34px;
 }
+
+.nav-bar__items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
