@@ -9,10 +9,14 @@
   align-items: center;
 
   height: 52px;
-  padding-top: 34px;
+  padding: 34px 10px 0;
 
   @media (max-width: $tablet-width-only) {
     padding-top: 21px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    padding: 11px 13px 0 18px;
   }
 }
 

@@ -10,6 +10,6 @@
   }
 
   @media (max-width: $mobile-width-only) {
-    max-width: 290px;
+    min-width: 290px;
   }
 }

@@ -7,9 +7,19 @@
   width: 202px;
 }
 
+.logo img {
+  @media (max-width: $mobile-width-only) {
+    width: 38px;
+  }
+}
+
 .logo__sign {
   display: flex;
   flex-direction: column;
+
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
 }
 
 .logo__text {
