@@ -1,0 +1,19 @@
+.intro {
+  position: relative;
+  width: 100%;
+  height: 878px;
+
+  background-color: #1B2D37;
+
+}
+
+.intro:before {
+  content: "";
+  background-image: url("../img/bg-splashes.png");
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 80%;
+}
