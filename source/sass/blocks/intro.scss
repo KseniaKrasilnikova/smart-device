@@ -32,14 +32,12 @@
 .intro__nav {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   max-height: 760px;
 
   color: #ffffff;
 
-
   left: 13%;
-  position: relative;
-  top: 28.6%;
   max-width: 720px;
 }
 
@@ -98,6 +96,9 @@
 
   opacity: 0.5;
   transform: rotate(-90deg);
+  position: absolute;
+  left: -42px;
+  bottom: 120px;
 }
 
 .intro__btn {
@@ -110,7 +111,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  height: 100%;
+  top: 0;
+  max-height: 780px;
 
   background-repeat: no-repeat;
 
