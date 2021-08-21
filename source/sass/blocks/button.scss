@@ -8,6 +8,7 @@
   text-align: center;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  border-radius: 5px;
 }
 
 .button__header {
@@ -15,9 +16,26 @@
   color: #ffffff;
   background-color: transparent;
   border: 1px solid #ffffff;
-  border-radius: 6px;
 
   @media (max-width: $tablet-width-only) {
     display: none;
   }
+}
+
+.button__accent {
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
+  background-color: $mainColor;
+  border: 1px solid $mainColor;
+}
+
+.ex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.expic {
+  background-image: url("../img/bg-intro-desktop.png");
 }
