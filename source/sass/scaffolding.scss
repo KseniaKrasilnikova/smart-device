@@ -32,3 +32,14 @@ button {
   height: 1px;
   margin: -1px;
 }
+
+.wrapper {
+  @media (min-width: $desktop-width) {
+    padding: 0 250px;
+    box-sizing: border-box;
+  }
+
+  @media (max-width: $tablet-width-only) {
+    padding: 0 90px;
+  }
+}

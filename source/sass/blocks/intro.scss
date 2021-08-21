@@ -1,43 +1,31 @@
 .intro {
-  position: relative;
-  width: 100%;
   height: 878px;
-
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
 
   background-color: #1b2d37;
+  background-repeat: no-repeat;
   background-size: cover;
 
   @media (min-width: $desktop-width) {
-    /*
     background-image: url("../img/bg-intro-desktop.png");
-    */
   }
 
   @media (max-width: $tablet-width-only) {
-    /*
+    height: 686px;
     background-image: url("../img/bg-intro-tablet.png");
-    */
   }
 
   @media (max-width: $mobile-width-only) {
-    /*
     background-image: url("../img/bg-intro-mobile.png");
-    */
   }
 }
+
 
 .intro__nav {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-height: 760px;
-
   color: #ffffff;
-
-  left: 13%;
   max-width: 720px;
 }
 
@@ -50,28 +38,6 @@
   line-height: 94px;
   letter-spacing: 0.07em;
   text-transform: uppercase;
-}
-
-.intro::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  opacity: 80%;
-
-  @media (min-width: $desktop-width) {
-    background-image: url("../img/bg-splashes-desktop.png");
-  }
-
-  @media (max-width: $tablet-width-only) {
-    background-image: url("../img/bg-splashes-tablet.png");
-  }
-
-  @media (max-width: $mobile-width-only) {
-    background-image: url("../img/bg-splashes-mobile.png");
-  }
 }
 
 .intro__nav p {
@@ -104,28 +70,4 @@
 .intro__btn {
   padding: 17px 14px;
   max-width: 407px;
-}
-
-.intro__pic {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  max-height: 780px;
-
-  background-repeat: no-repeat;
-
-  @media (min-width: $desktop-width) {
-    background-image: url("../img/bg-intro-desktop.png");
-    background-size: cover;
-  }
-
-  @media (max-width: $tablet-width-only) {
-    background-image: url("../img/bg-intro-tablet.png");
-  }
-
-  @media (max-width: $mobile-width-only) {
-    background-image: url("../img/bg-intro-mobile.png");
-  }
 }

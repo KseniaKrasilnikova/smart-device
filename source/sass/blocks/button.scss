@@ -29,13 +29,3 @@
   background-color: $mainColor;
   border: 1px solid $mainColor;
 }
-
-.ex {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-}
-
-.expic {
-  background-image: url("../img/bg-intro-desktop.png");
-}
