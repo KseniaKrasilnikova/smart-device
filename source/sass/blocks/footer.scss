@@ -1,0 +1,15 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+
+  height: 316px;
+}
+
+.footer__main-block {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+}
+
