@@ -35,11 +35,15 @@ button {
 
 .wrapper {
   @media (min-width: $desktop-width) {
-    padding: 0 250px;
+    padding: 0 13%;
     box-sizing: border-box;
   }
 
   @media (max-width: $tablet-width-only) {
     padding: 0 90px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    padding: 0 17px;
   }
 }
