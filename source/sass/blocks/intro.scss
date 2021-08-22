@@ -35,6 +35,8 @@
   }
 
   @media (max-width: $mobile-width-only) {
+    max-width: 470px;
+
     margin-top: 287px;
   }
 }
@@ -55,6 +57,7 @@
   }
 
   @media (max-width: $mobile-width-only) {
+    max-width: 277px;
     font-size: 40px;
     line-height: 47px;
   }
@@ -103,8 +106,6 @@
 }
 
 a.intro__scroll {
-  padding-top: 16px;
-
   font-weight: normal;
   font-size: 14px;
   line-height: 16px;
@@ -113,8 +114,8 @@ a.intro__scroll {
   opacity: 0.5;
   transform: rotate(-90deg);
   position: absolute;
-  left: -6%;
-  bottom: -55%;
+  left: -4.8%;
+  bottom: 23%;
 
   @media (max-width: $tablet-width-only) {
     display: none;
