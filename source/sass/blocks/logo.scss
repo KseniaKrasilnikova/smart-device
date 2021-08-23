@@ -17,7 +17,9 @@
 .logo__sign {
   display: flex;
   flex-direction: column;
+}
 
+.logo__sign--none {
   @media (max-width: $mobile-width-only) {
     display: none;
   }
