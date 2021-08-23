@@ -1,8 +1,6 @@
 .footer {
   display: flex;
   flex-direction: column;
-
-  height: 316px;
 }
 
 .footer__main-block {
@@ -18,18 +16,22 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 64px 0;
   height: 160px;
+  padding: 65px 0 40px;
+  margin-right: 25px;
 }
 
 .footer__info {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  padding: 64px 0;
+  padding: 65px 0 40px;
+  max-width: 995px;
+  justify-content: space-between;
 }
 
 .footer__info h3 {
+  margin: 0 0 25px 0;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: normal;
   font-size: 15px;
@@ -57,7 +59,6 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 14px 0;
 
   &::before {
     position: absolute;
@@ -73,11 +74,19 @@
 .footer__rights p {
   font-size: 13px;
   line-height: 24px;
-  text-align: right;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: #1b2d37;
   opacity: 0.5;
+
+  &:nth-child(2n) {
+    margin-left: 73px;
+  }
+
+  &:nth-child(3n) {
+    flex-grow: 1;
+    margin-left: 143px;
+  }
 }
 
 .footer__rights a {
