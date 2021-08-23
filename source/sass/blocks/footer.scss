@@ -27,7 +27,7 @@
   @media (min-width: $desktop-width) {
     flex-direction: row;
     flex-wrap: nowrap;
-    padding: 40px 0;
+    padding: 65px 0 40px 0;
   }
 
   @media (max-width: $tablet-width-only) {
@@ -67,9 +67,10 @@
   }
 
   @media (max-width: $mobile-width-only) {
+    box-sizing: border-box;
     flex-direction: column;
-    height: 263px;
-    padding: 0 5%;
+    height: 261px;
+    padding: 46px 5% 13px;
   }
 }
 
