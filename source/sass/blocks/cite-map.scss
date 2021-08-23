@@ -5,6 +5,10 @@
 
 .cite-map ul {
   column-count: 2;
+
+  @media (max-width: $tablet-width-only) {
+    column-count: 1;
+  }
 }
 
 .cite-map li {
