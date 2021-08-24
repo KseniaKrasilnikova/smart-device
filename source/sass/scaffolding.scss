@@ -56,4 +56,8 @@ button {
   @media (min-width: $desktop-width) {
     padding: 0 19.5%;
   }
+
+  @media (max-width: $tablet-width-only) {
+    padding: 0 3.3%;
+  }
 }

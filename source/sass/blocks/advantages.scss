@@ -7,6 +7,10 @@
 
     padding: 0;
     margin: 109px 0 0 0;
+
+    @media (max-width: $tablet-width-only) {
+      margin: 52px 0 0 0;
+    }
   }
 
   h3 {
@@ -16,6 +20,10 @@
     font-size: 24px;
     line-height: 34px;
     color: $mainColor;
+
+    @media (max-width: $tablet-width-only) {
+      margin: 4px 0 10px;
+    }
   }
 
   p {
@@ -57,8 +65,20 @@
       color: #ffffff;
     }
 
+    p {
+      color: #ffffff;
+    }
+
     svg {
       fill: #ffffff;
     }
+  }
+
+  @media (max-width: $tablet-width-only) {
+    height: auto;
+    min-height: 232px;
+    width: 345px;
+    padding: 23px 24px 18px 21px;
+    margin-bottom: 29px;
   }
 }
