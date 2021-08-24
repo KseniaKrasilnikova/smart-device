@@ -1,0 +1,42 @@
+.advantages ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  padding: 0;
+  margin: 109px 0 0 0;
+}
+
+.advantages li {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 299px;
+  width: 570px;
+
+  box-sizing: border-box;
+  padding: 38px 42px 65px;
+  margin-bottom: 30px;
+
+  list-style: none;
+  border: 1px #ebebeb solid;
+  border-left: 3px $mainColor solid;
+}
+
+.advantages h3 {
+  margin: 0;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 34px;
+  color: $mainColor;
+}
+
+.advantages p {
+  margin: 0;
+
+  line-height: 22px;
+  color: #666666;
+}
