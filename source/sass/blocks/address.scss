@@ -2,12 +2,8 @@
   max-width: 340px;
 
   @media (max-width: $mobile-width-only) {
-    /*
-    padding: 0 0 7px 0;
-    */
     position: relative;
     max-width: 768px;
     padding: 0 5%;
-
   }
 }

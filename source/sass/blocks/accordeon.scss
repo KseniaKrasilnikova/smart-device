@@ -6,6 +6,10 @@
   @media (max-width: $mobile-width-only) {
     & > .accordeon__plus {
       display: block;
+
+      &.no-js {
+        display: none;
+      }
     }
 
     & > .accordeon__minus {
@@ -14,6 +18,10 @@
 
     & + .accordeon__content {
       display: none;
+
+      &.no-js {
+        display: block;
+      }
     }
   }
 }
