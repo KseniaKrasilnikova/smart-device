@@ -1,15 +1,25 @@
 'use strict';
-var pageHeader = document.querySelector('.page-header');
-var headerToggle = document.querySelector('.page-header__toggle');
 
-pageHeader.classList.remove('page-header--nojs');
+var accordeonButtons = document.getElementsByClassName('accordeon__btn');
+for (var i = 0; i < accordeonButtons.length; i++) {
+  accordeonButtons[i].addEventListener('click', function () {
+    for (var j = 0; j < accordeonButtons.length; j++) {
+      accordeonButtons[j].classList.remove('accordeon--active');
+    }
+    this.classList.toggle('accordeon--active');
+  });
+}
+/*
+var accordeonMapBtn = document.querySelector('.accordeon__btn--map');
+var accordeonAddressBtn = document.querySelector('.accordeon__btn--address');
+var accordeonMapContent = document.querySelector('.cite-map__content');
+var accordeonAddressContent = document.querySelector('.address__content');
 
-headerToggle.addEventListener('click', function () {
-  if (pageHeader.classList.contains('page-header--closed')) {
-    pageHeader.classList.remove('page-header--closed');
-    pageHeader.classList.add('page-header--opened');
+accordeonMapBtn.addEventListener('click', function () {
+  if (accordeonMapContent.classList.contains('cite-map--closed')) {
+    accordeonMapContent.classList.remove('cite-map--closed');
+    accordeonMapContent.classList.add('cite-map--opened');
   } else {
-    pageHeader.classList.add('page-header--closed');
-    pageHeader.classList.remove('page-header--opened');
+    accordeonMapContent.classList.remove('cite-map--opened');
   }
-});
+});*/

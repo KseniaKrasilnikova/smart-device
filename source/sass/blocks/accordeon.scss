@@ -1,4 +1,48 @@
-.accordeon {
-  border: none;
-  background: transparent;
+.accordeon__btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: $mobile-width-only) {
+    & > .accordeon__plus {
+      display: block;
+    }
+
+    & > .accordeon__minus {
+      display: none;
+    }
+
+    & + .accordeon__content {
+      display: none;
+    }
+  }
+}
+
+.accordeon--active {
+  & > .accordeon__plus {
+    display: none;
+  }
+
+  & > .accordeon__minus {
+    display: block;
+  }
+
+  & + .accordeon__content {
+    display: block;
+  }
+}
+
+.accordeon__content {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+}
+
+.accordeon__plus,
+.accordeon__minus {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
