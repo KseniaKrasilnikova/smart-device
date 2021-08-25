@@ -60,4 +60,8 @@ button {
   @media (max-width: $tablet-width-only) {
     padding: 0 3.3%;
   }
+
+  @media (max-width: $mobile-width-only) {
+    padding: 0 5%;
+  }
 }

@@ -1,7 +1,17 @@
 .block {
-  height: 1263px;
+  min-height: 1263px;
 
-  background-image: url("../img/triangels-bg-grey.png");
+  background-image: url("../img/triangels-bg-grey-desktop.png");
   background-repeat: no-repeat;
   background-color: #ffffff;
+
+  @media (max-width: $tablet-width-only) {
+    min-height: 1113px;
+    background-image: url("../img/triangels-bg-grey-tablet.png");
+  }
+
+  @media (max-width: $mobile-width-only) {
+    min-height: 1797px;
+    background-image: url("../img/triangels-bg-grey-mobile.png");
+  }
 }

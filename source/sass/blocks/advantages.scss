@@ -87,6 +87,10 @@
     min-width: 345px;
     padding: 23px 24px 18px 21px;
   }
+
+  @media (max-width: $mobile-width-only) {
+    min-width: 290px;
+  }
 }
 
 .advantages__row {
@@ -95,4 +99,8 @@
   flex-wrap: nowrap;
   align-items: center;
   margin-bottom: 30px;
+
+  @media (max-width: $mobile-width-only) {
+    flex-direction: column;
+  }
 }
