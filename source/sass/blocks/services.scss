@@ -1,3 +1,47 @@
 .services {
+  height: 938px;
   background-color: #1b2d37;
+}
+
+.services__wrapper {
+  width: 1170px;
+  margin: 0 auto;
+}
+
+.services h3 {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 51px;
+  color: #FFFFFF;
+
+  @media (max-width: $tablet-width-only) {
+    font-size: 32px;
+    line-height: 45px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    font-size: 28px;
+    line-height: 39px;
+  }
+}
+
+.services ul {
+   list-style: none;
+}
+
+.services a {
+  position: relative;
+}
+
+.services p {
+  position: absolute;
+  z-index: 1;
+
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 30px;
+  color: #FFFFFF;
 }

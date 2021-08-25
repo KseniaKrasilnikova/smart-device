@@ -69,12 +69,7 @@
 
   &:last-of-type {
     @media (max-width: $tablet-width-only) {
-      height: 87px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      display: inherit;
-      -webkit-line-clamp: 4;
-      -webkit-box-orient: vertical;
+      display: none;
     }
 
     @media (max-width: $mobile-width-only) {
