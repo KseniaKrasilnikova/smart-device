@@ -68,14 +68,16 @@
   margin: 0 0 32px 0;
 
   &:last-of-type {
-    height: 87px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: inherit;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
-
     @media (max-width: $tablet-width-only) {
+      height: 87px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: inherit;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+    }
+
+    @media (max-width: $mobile-width-only) {
       height: 170px;
       -webkit-line-clamp: 8;
     }
