@@ -1,26 +1,28 @@
 .form {
-  //margin-left: 20px;
   position: absolute;
-  right: 30%;
-  top: 16%;
+  right: 19.5%;
+  top: 13.5%;
 
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: space-between;
   box-sizing: border-box;
   max-width: 600px;
-  min-height: 530px;
+  min-height: 466px;
 
   color: #ffffff;
 }
 
 .form h3 {
+  margin: 0;
+
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: normal;
   font-size: 36px;
   line-height: 51px;
 
-  @media (min-width: $tablet-width-only) {
+  @media (max-width: $tablet-width-only) {
     font-size: 32px;
     line-height: 45px;
   }
@@ -29,6 +31,10 @@
     font-size: 28px;
     line-height: 39px;
   }
+}
+
+.form__description {
+  margin: 0 0 38px 0;
 }
 
 .form__body {
@@ -44,9 +50,15 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 37px;
 }
 
-.form__required input {
+.form__textarea {
+  margin-bottom: 40px;
+}
+
+.form__required input,
+.form__textarea textarea {
   height: 50px;
   width: 269px;
   box-sizing: border-box;
@@ -56,15 +68,6 @@
   opacity: 80%;
   padding: 14px 16px;
 
-  &::placeholder {
-    color: #ffffff;
-    font-family: "PT Mono", "Courier", monospace;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 22px;
-  }
-
   &:focus {
     outline: none;
   }
@@ -72,9 +75,19 @@
   /*box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);*/
 }
 
+.form__required input::placeholder,
 .form__textarea textarea {
-  background-color: #19baff;
-  border: none;
+  color: #ffffff;
+  font-family: "PT Mono", "Courier", monospace;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.form__textarea textarea {
+  height: 154px;
+  width: 570px;
 }
 
 .form__submit {
@@ -84,7 +97,6 @@
   justify-content: space-between;
   align-items: center;
 }
-
 
 .form__submit input {
   width: 270px;
