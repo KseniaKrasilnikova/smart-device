@@ -1,5 +1,5 @@
 .services {
-  height: 938px;
+  min-height: 938px;
   background-color: #1b2d37;
 }
 
@@ -14,6 +14,8 @@
   font-size: 36px;
   line-height: 51px;
   color: #FFFFFF;
+  margin: 0;
+  padding-top: 90px;
 
   @media (max-width: $tablet-width-only) {
     font-size: 32px;
@@ -27,16 +29,35 @@
 }
 
 .services ul {
-   list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0;
+  margin: 50px 0 0 0;
+  list-style: none;
+}
+
+.services li {
+  width: 370px;
+  height: 620px;
+  margin-bottom: 20px;
 }
 
 .services a {
-  position: relative;
+  position: absolute;
+  max-height: 620px;
+  cursor: pointer;
 }
 
-.services p {
+.services h4 {
   position: absolute;
   z-index: 1;
+  max-width: 171px;
+  margin: 0;
+  padding: 50px 44px;
 
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-style: normal;
@@ -44,4 +65,26 @@
   font-size: 20px;
   line-height: 30px;
   color: #FFFFFF;
+}
+
+.services img {
+  opacity: 20%;
+}
+
+.services__link-btn {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  right: 0;
+  height: 63px;
+  width: 63px;
+  background-color: $mainColor;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.services p {
+  margin: 0;
+  text-align: center;
+  padding: 21px 0;
 }

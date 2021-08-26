@@ -1,4 +1,5 @@
 .about {
+  height: 400px;
   margin-top: 98px;
 
   @media (max-width: $tablet-width-only) {
@@ -23,6 +24,7 @@
 
   @media (max-width: $tablet-width-only) {
     background-size: contain;
+    height: 359px;
   }
 
   @media (max-width: $mobile-width-only) {
@@ -38,7 +40,7 @@
   margin-left: 182px;
 
   @media (max-width: $tablet-width-only) {
-    display: -webkit-box;
+    margin-left: 188px;
   }
 
   @media (max-width: $mobile-width-only) {
@@ -47,7 +49,7 @@
 }
 
 .about___text h3 {
-  margin: 0 0 23px 0;
+  margin: 0 0 16px 0;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -55,30 +57,49 @@
   line-height: 51px;
 
   @media (max-width: $tablet-width-only) {
+    margin: 0 0 27px 0;
     font-size: 32px;
     line-height: 45px;
   }
 
   @media (max-width: $mobile-width-only) {
+    margin: 0 0 21px 0;
     font-size: 28px;
   }
 }
 
 .about___text p {
-  margin: 0 0 32px 0;
-
-  &:last-of-type {
-    @media (max-width: $tablet-width-only) {
-      display: none;
-    }
-
-    @media (max-width: $mobile-width-only) {
-      height: 170px;
-      -webkit-line-clamp: 8;
-    }
-  }
+  margin: 0 0 23px 0;
 
   @media (max-width: $tablet-width-only) {
-    margin: 0 0 44px 0;
+    margin: 0 0 26px 0;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    margin: 0 0 46px 0;
+
+    &:last-of-type {
+      margin: 0 0 33px 0;
+    }
+  }
+}
+
+.about__full-text {
+  @media (max-width: $tablet-width-only) {
+    display: none;
+  }
+}
+
+.about__short-text {
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.about___text a {
+  margin-top: 19px;
+
+  @media (max-width: $tablet-width-only) {
+    margin: 0;
   }
 }
