@@ -1,0 +1,97 @@
+.form {
+  //margin-left: 20px;
+  position: absolute;
+  right: 30%;
+  top: 16%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+  max-width: 600px;
+  min-height: 530px;
+
+  color: #ffffff;
+}
+
+.form h3 {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 51px;
+
+  @media (min-width: $tablet-width-only) {
+    font-size: 32px;
+    line-height: 45px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    font-size: 28px;
+    line-height: 39px;
+  }
+}
+
+.form p {
+
+}
+
+.form__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.form__required {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.form__submit {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+
+.form__submit input {
+  background-color: red;
+
+}
+
+.form__note {
+  display: block;
+  max-width: 230px;
+  margin-left: 23px;
+
+  font-size: 14px;
+  line-height: 16px;
+  opacity: 80%;
+}
+
+.form__check {
+  max-width: 260px;
+}
+
+.form__check input {
+  position: absolute;
+  appearance: none;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.form__tick {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: transparent;
+  border: 1px solid #ffffff;
+}
+
+.form__check input:checked+ .form__tick {
+  background-image: url(../img/check.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}

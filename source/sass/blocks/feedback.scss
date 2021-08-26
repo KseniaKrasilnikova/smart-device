@@ -1,0 +1,12 @@
+.feedback {
+  position: relative;
+  min-height: 671px;
+  background-color: $mainColor;
+
+  @media (min-width: $desktop-width) {
+    background-image: url("../img/plane-bg-desktop.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -60px;
+  }
+}
