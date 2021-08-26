@@ -92,6 +92,10 @@
 
     &:last-of-type {
       margin-bottom: 78px;
+
+      @media (max-width: $mobile-width-only) {
+        margin-bottom: 63px;
+      }
     }
   }
 

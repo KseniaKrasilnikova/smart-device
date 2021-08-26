@@ -13,4 +13,8 @@
   @media (max-width: $tablet-width-only) {
     min-height: 664px;
   }
+
+  @media (max-width: $mobile-width-only) {
+    min-height: 640px;
+  }
 }
