@@ -44,6 +44,11 @@
   width: 370px;
   height: 620px;
   margin-bottom: 20px;
+
+  @media (max-width: $tablet-width-only) {
+    width: 720px;
+    height: 256px;
+  }
 }
 
 .services a {
@@ -68,6 +73,7 @@
 }
 
 .services img {
+  width: 100%;
   opacity: 20%;
 }
 
