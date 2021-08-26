@@ -9,4 +9,8 @@
     background-size: cover;
     background-position-y: -60px;
   }
+
+  @media (max-width: $tablet-width-only) {
+    min-height: 664px;
+  }
 }

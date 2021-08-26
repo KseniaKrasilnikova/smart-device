@@ -89,6 +89,10 @@
     width: 720px;
     height: 256px;
     margin-bottom: 46px;
+
+    &:last-of-type {
+      margin-bottom: 78px;
+    }
   }
 
   @media (max-width: $mobile-width-only) {
