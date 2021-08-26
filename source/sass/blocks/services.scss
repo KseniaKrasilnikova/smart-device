@@ -1,6 +1,12 @@
 .services {
   min-height: 938px;
   background-color: #1b2d37;
+
+  @media (max-width: $mobile-width-only) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .services__wrapper {
@@ -13,48 +19,25 @@
   font-weight: normal;
   font-size: 36px;
   line-height: 51px;
-  color: #FFFFFF;
+  color: #ffffff;
   margin: 0;
   padding-top: 90px;
 
   @media (max-width: $tablet-width-only) {
+    max-width: 613px;
+    padding-top: 49px;
+
     font-size: 32px;
     line-height: 45px;
   }
 
   @media (max-width: $mobile-width-only) {
+    max-width: 280px;
+
     font-size: 28px;
     line-height: 39px;
+    padding-left: 9px;
   }
-}
-
-.services ul {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-
-  padding: 0;
-  margin: 50px 0 0 0;
-  list-style: none;
-}
-
-.services li {
-  width: 370px;
-  height: 620px;
-  margin-bottom: 20px;
-
-  @media (max-width: $tablet-width-only) {
-    width: 720px;
-    height: 256px;
-  }
-}
-
-.services a {
-  position: absolute;
-  max-height: 620px;
-  cursor: pointer;
 }
 
 .services h4 {
@@ -69,7 +52,58 @@
   font-weight: normal;
   font-size: 20px;
   line-height: 30px;
-  color: #FFFFFF;
+  color: #ffffff;
+
+  @media (max-width: $tablet-width-only) {
+    padding: 40px 44px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    padding: 21px 34px;
+  }
+}
+
+.services ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0;
+  margin: 50px 0 0 0;
+  list-style: none;
+
+  @media (max-width: $mobile-width-only) {
+    width: 290px;
+    margin: 42px 0 0 0;
+  }
+}
+
+.services li {
+  width: 370px;
+  height: 620px;
+  margin-bottom: 20px;
+
+  @media (max-width: $tablet-width-only) {
+    width: 720px;
+    height: 256px;
+    margin-bottom: 46px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    margin-bottom: 31px;
+  }
+}
+
+.services a {
+  position: absolute;
+  max-height: 620px;
+  cursor: pointer;
+
+  @media (max-width: $tablet-width-only) {
+    max-height: 256px;
+  }
 }
 
 .services img {

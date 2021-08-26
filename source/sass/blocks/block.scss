@@ -6,12 +6,12 @@
   background-color: #ffffff;
 
   @media (max-width: $tablet-width-only) {
-    min-height: 1113px;
+    min-height: 1061px;
     background-image: url("../img/triangels-bg-grey-tablet.png");
   }
 
   @media (max-width: $mobile-width-only) {
-    min-height: 1797px;
+    min-height: 1759px;
     background-image: url("../img/triangels-bg-grey-mobile.png");
   }
 }
