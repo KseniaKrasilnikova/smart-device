@@ -60,6 +60,12 @@
 .call__required input,
 .call__required textarea {
   padding: 13px 24px;
+
+  &:focus,
+  &:hover {
+    outline: none;
+    border: 1px solid #ffffff;
+  }
 }
 
 .call__submit {

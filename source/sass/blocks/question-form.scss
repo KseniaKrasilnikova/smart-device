@@ -52,8 +52,14 @@
 }
 
 .question-form__required input,
-.question-form__required textarea {
+.question-form__textarea textarea {
   padding: 14px 16px;
+
+  &:focus,
+  &:hover {
+    outline: none;
+    border: 1px solid #ffffff;
+  }
 
   @media (max-width: $tablet-width-only) {
     padding: 14px 24px;

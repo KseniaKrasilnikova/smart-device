@@ -47,10 +47,6 @@
   justify-content: space-between;
 }
 
-.form__textarea {
-
-}
-
 .form__required input {
   height: 50px;
   width: 269px;
@@ -77,12 +73,6 @@
   background-color: #19baff;
   border: none;
   opacity: 80%;
-
-  &:focus,
-  &:hover {
-    outline: none;
-    border: 1px solid #ffffff;
-  }
 }
 
 .form__required input,

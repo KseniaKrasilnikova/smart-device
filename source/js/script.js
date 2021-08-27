@@ -29,13 +29,19 @@ var setupForm = function () {
 
   // validation of feedback form
   var formPhone = document.getElementById('phone');
+  var popupFormPhone = document.getElementById('popup-phone');
   var formName = document.getElementById('name');
+  var popupFormName = document.getElementById('popup-name');
   var phoneError = document.getElementById('phone-error');
+  var popupFormPhoneError = document.getElementById('popup-phone-error');
   var nameError = document.getElementById('name-error');
+  var popupNameError = document.getElementById('popup-name-error');
   var personalData = document.getElementById('check');
+  var popupPersonalData = document.getElementById('call-check');
   var formSubmitBtn = document.getElementById('form-submit');
-  var formInputs = document.querySelectorAll('.input');
-  var formErrors = document.querySelectorAll('.form__comment');
+  var popupFormSubmitBtn = document.getElementById('call-submit');
+  var popupFormInputs = document.querySelectorAll('.call__form label input');
+  var popupFormErrors = document.querySelectorAll('.call__form .form__comment');
 
   var validateName = function (inputElement, errorElement) {
     var nameIsValid = /^[a-zA-Z ]{2,30}$/.test(inputElement.value);
@@ -83,6 +89,12 @@ var setupForm = function () {
       & validatePersonalData(personalData);
   };
 
+  var isPopupFormValid = function () {
+    return validateName(popupFormName, popupNameError)
+      & validatePhone(popupFormPhone, popupFormPhoneError)
+      & validatePersonalData(popupPersonalData);
+  };
+
   var resetForm = function (inputElements, errorElements) {
     for (var i = 0; i < inputElements.length; i++) {
       inputElements[i].value = null;
@@ -94,52 +106,59 @@ var setupForm = function () {
   };
 
   formSubmitBtn.addEventListener('click', function (event) {
-    if (isFormValid()) {
-      resetForm(formInputs, formErrors);
+    if (!isFormValid()) {
+      event.preventDefault();
+    }
+  });
+  popupFormSubmitBtn.addEventListener('click', function (event) {
+    if (isPopupFormValid()) {
+      resetForm(popupFormInputs, popupFormErrors);
     } else {
       event.preventDefault();
     }
   });
 
   // mask for phone input in form
-  window.addEventListener('DOMContentLoaded', function () {
-    var keyCode;
+  var keyCode;
 
-    function mask(event) {
-      event.keyCode && (keyCode = event.keyCode);
-      var pos = formPhone.selectionStart;
-      if (pos < 3) {
-        event.preventDefault();
-      }
-      var matrix = '+7 (___) ___ ____';
-      var i = 0;
-      var def = matrix.replace(/\D/g, '');
-      var val = formPhone.value.replace(/\D/g, '');
-      var newValue = matrix.replace(/[_\d]/g, function (a) {
-        return i < val.length ? val.charAt(i++) || def.charAt(i) : a;
-      });
-      i = newValue.indexOf('_');
-      if (i !== -1) {
-        i < 5 && (i = 3);
-        newValue = newValue.slice(0, i);
-      }
-      var reg = matrix.substr(0, formPhone.value.length).replace(/_+/g, function (a) {
-        return '\\d{1,' + a.length + '}';
-      }).replace(/[+()]/g, '\\$&');
-      reg = new RegExp('^' + reg + '$');
-      if (!reg.test(formPhone.value) || formPhone.value.length < 5 || keyCode > 47 && keyCode < 58) {
-        formPhone.value = newValue;
-      }
-      if (event.type === 'blur' && formPhone.value.length < 5) {
-        formPhone.value = '';
-      }
+  var mask = function (event) {
+    event.keyCode && (keyCode = event.keyCode);
+    var pos = this.selectionStart;
+    if (pos < 3) {
+      event.preventDefault();
     }
+    var matrix = '+7 (___) ___ ____';
+    var i = 0;
+    var def = matrix.replace(/\D/g, '');
+    var val = this.value.replace(/\D/g, '');
+    var newValue = matrix.replace(/[_\d]/g, function (a) {
+      return i < val.length ? val.charAt(i++) || def.charAt(i) : a;
+    });
+    i = newValue.indexOf('_');
+    if (i !== -1) {
+      i < 5 && (i = 3);
+      newValue = newValue.slice(0, i);
+    }
+    var reg = matrix.substr(0, this.value.length).replace(/_+/g, function (a) {
+      return '\\d{1,' + a.length + '}';
+    }).replace(/[+()]/g, '\\$&');
+    reg = new RegExp('^' + reg + '$');
+    if (!reg.test(this.value) || this.value.length < 5 || keyCode > 47 && keyCode < 58) {
+      this.value = newValue;
+    }
+    if (event.type === 'blur' && this.value.length < 5) {
+      this.value = '';
+    }
+  };
 
-    formPhone.addEventListener('input', mask, false);
-    formPhone.addEventListener('focus', mask, false);
-    formPhone.addEventListener('blur', mask, false);
-    formPhone.addEventListener('keydown', mask, false);
-  });
+  formPhone.addEventListener('input', mask, false);
+  formPhone.addEventListener('focus', mask, false);
+  formPhone.addEventListener('blur', mask, false);
+  formPhone.addEventListener('keydown', mask, false);
+  popupFormPhone.addEventListener('input', mask, false);
+  popupFormPhone.addEventListener('focus', mask, false);
+  popupFormPhone.addEventListener('blur', mask, false);
+  popupFormPhone.addEventListener('keydown', mask, false);
 };
 
 jsOn();
