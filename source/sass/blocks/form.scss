@@ -141,6 +141,10 @@
   width: 1px;
   height: 1px;
   margin: -1px;
+
+  &.form__input--invalid + .form__tick {
+    border: 1px solid #ff0000;
+  }
 }
 
 .form__tick {

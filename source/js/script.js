@@ -25,22 +25,96 @@ var jsOn = function () {
 };
 
 
-// mask for phone input in form
 var setupForm = function () {
+
+  // validation of feedback form
+  var formPhone = document.getElementById('phone');
+  var formName = document.getElementById('name');
+  var phoneError = document.getElementById('phone-error');
+  var nameError = document.getElementById('name-error');
+  var personalData = document.getElementById('check');
+  var formSubmitBtn = document.getElementById('form-submit');
+  var formInputs = document.querySelectorAll('.input');
+  var formErrors = document.querySelectorAll('.form__comment');
+
+  var validateName = function (inputElement, errorElement) {
+    var nameIsValid = /^[a-zA-Z ]{2,30}$/.test(inputElement.value);
+    if (nameIsValid) {
+      inputElement.classList.remove('form__input--invalid');
+      inputElement.blur();
+      errorElement.classList.add('visually-hidden');
+    } else {
+      inputElement.classList.remove('form__input--invalid');
+      inputElement.blur();
+      errorElement.classList.remove('visually-hidden');
+    }
+    return nameIsValid;
+  };
+
+  var validatePhone = function (inputElement, errorElement) {
+    var phoneNmbIsValid = /^(\+7)?[\s\-]?\(?[\s\-]?[0-9]{3}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{4}$/.test(inputElement.value);
+    if (phoneNmbIsValid) {
+      inputElement.classList.remove('form__input--invalid');
+      inputElement.blur();
+      errorElement.classList.add('visually-hidden');
+    } else {
+      inputElement.classList.add('form__input--invalid');
+      inputElement.blur();
+      errorElement.classList.remove('visually-hidden');
+    }
+    return phoneNmbIsValid;
+  };
+
+  var validatePersonalData = function (inputElement) {
+    var personalDataIsValid = inputElement.checked;
+    if (personalDataIsValid) {
+      inputElement.classList.remove('form__input--invalid');
+      inputElement.blur();
+    } else {
+      inputElement.classList.add('form__input--invalid');
+      inputElement.blur();
+    }
+    return personalDataIsValid;
+  };
+
+  var isFormValid = function () {
+    return validateName(formName, nameError)
+      & validatePhone(formPhone, phoneError)
+      & validatePersonalData(personalData);
+  };
+
+  var resetForm = function (inputElements, errorElements) {
+    for (var i = 0; i < inputElements.length; i++) {
+      inputElements[i].value = null;
+      inputElements[i].classList.remove('form__input--invalid');
+    }
+    for (i = 0; i < errorElements.length; i++) {
+      errorElements[i].classList.add('visually-hidden');
+    }
+  };
+
+  formSubmitBtn.addEventListener('click', function (event) {
+    if (isFormValid()) {
+      resetForm(formInputs, formErrors);
+    } else {
+      event.preventDefault();
+    }
+  });
+
+  // mask for phone input in form
   window.addEventListener('DOMContentLoaded', function () {
-    var input = document.getElementById('phone');
     var keyCode;
 
     function mask(event) {
       event.keyCode && (keyCode = event.keyCode);
-      var pos = input.selectionStart;
+      var pos = formPhone.selectionStart;
       if (pos < 3) {
         event.preventDefault();
       }
       var matrix = '+7 (___) ___ ____';
       var i = 0;
       var def = matrix.replace(/\D/g, '');
-      var val = input.value.replace(/\D/g, '');
+      var val = formPhone.value.replace(/\D/g, '');
       var newValue = matrix.replace(/[_\d]/g, function (a) {
         return i < val.length ? val.charAt(i++) || def.charAt(i) : a;
       });
@@ -49,83 +123,24 @@ var setupForm = function () {
         i < 5 && (i = 3);
         newValue = newValue.slice(0, i);
       }
-      var reg = matrix.substr(0, input.value.length).replace(/_+/g, function (a) {
+      var reg = matrix.substr(0, formPhone.value.length).replace(/_+/g, function (a) {
         return '\\d{1,' + a.length + '}';
       }).replace(/[+()]/g, '\\$&');
       reg = new RegExp('^' + reg + '$');
-      if (!reg.test(input.value) || input.value.length < 5 || keyCode > 47 && keyCode < 58) {
-        input.value = newValue;
+      if (!reg.test(formPhone.value) || formPhone.value.length < 5 || keyCode > 47 && keyCode < 58) {
+        formPhone.value = newValue;
       }
-      if (event.type === 'blur' && input.value.length < 5) {
-        input.value = '';
+      if (event.type === 'blur' && formPhone.value.length < 5) {
+        formPhone.value = '';
       }
     }
 
-    input.addEventListener('input', mask, false);
-    input.addEventListener('focus', mask, false);
-    input.addEventListener('blur', mask, false);
-    input.addEventListener('keydown', mask, false);
-
+    formPhone.addEventListener('input', mask, false);
+    formPhone.addEventListener('focus', mask, false);
+    formPhone.addEventListener('blur', mask, false);
+    formPhone.addEventListener('keydown', mask, false);
   });
 };
-
-// validation of feedback form
-
-var formPhone = document.getElementById('phone');
-var formName = document.getElementById('name');
-var phoneError = document.getElementById('phone-error');
-var nameError = document.getElementById('name-error');
-var formSubmitBtn = document.getElementById('form-submit');
-var formInputs = document.querySelectorAll('.input');
-var formErrors = document.querySelectorAll('.form__comment');
-
-var validateName = function (inputElement, errorElement) {
-  var nameIsValid = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/.test(inputElement.value);
-  if (nameIsValid) {
-    inputElement.classList.remove('form__input--invalid');
-    inputElement.blur();
-    errorElement.classList.add('visually-hidden');
-  } else {
-    inputElement.classList.remove('form__input--invalid');
-    inputElement.blur();
-    errorElement.classList.remove('visually-hidden');
-  }
-  return nameIsValid;
-};
-
-var validatePhone = function (inputElement, errorElement) {
-  var phoneNmbIsValid = /^\d{10}$/.test(inputElement.value);
-  if (phoneNmbIsValid) {
-    inputElement.classList.remove('form__input--invalid');
-    inputElement.blur();
-    errorElement.classList.add('visually-hidden');
-  } else {
-    inputElement.classList.add('form__input--invalid');
-    inputElement.blur();
-    errorElement.classList.remove('visually-hidden');
-  }
-  return phoneNmbIsValid;
-};
-
-var isFormValid = function () {
-  return validateName(formName, nameError) & validatePhone(formPhone, phoneError);
-};
-
-var resetForm = function (inputElements, errorElements) {
-  for (var i = 0; i < inputElements.length; i++) {
-    inputElements[i].value = null;
-    inputElements[i].classList.remove('form__input--invalid');
-  }
-  for (i = 0; i < errorElements.length; i++) {
-    errorElements[i].classList.add('visually-hidden');
-  }
-};
-
-formSubmitBtn.addEventListener('click', function () {
-  if (isFormValid()) {
-    resetForm(formInputs, formErrors);
-  }
-});
 
 jsOn();
 setupAccordeon();
