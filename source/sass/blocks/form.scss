@@ -108,8 +108,10 @@
   opacity: 80%;
   padding: 14px 16px;
 
-  &:focus {
+  &:focus,
+  &:hover {
     outline: none;
+    border: 1px solid #ffffff;
   }
 
   @media (max-width: $tablet-width-only) {
@@ -121,8 +123,10 @@
   }
 }
 
+.form__required input,
 .form__required input::placeholder,
-.form__textarea textarea {
+.form__textarea textarea,
+.form__textarea textarea::placeholder {
   color: #ffffff;
   font-family: "PT Mono", "Courier", monospace;
   font-style: normal;
@@ -130,6 +134,7 @@
   font-size: 16px;
   line-height: 22px;
 }
+
 
 .form__required input {
   height: 50px;
@@ -148,6 +153,7 @@
 .form__textarea textarea {
   height: 154px;
   width: 570px;
+  resize: none;
 
   @media (max-width: $tablet-width-only) {
     height: 160px;
@@ -190,6 +196,12 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #ffffff;
+
+  &:hover,
+  &:focus {
+    background-color: #ffffff;
+    color: $mainColor;
+  }
 
   @media (max-width: $tablet-width-only) {
     width: 280px;
