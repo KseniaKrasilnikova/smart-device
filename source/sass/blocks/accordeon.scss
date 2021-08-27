@@ -38,6 +38,10 @@
   & + .accordeon__content {
     display: block;
   }
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .accordeon__content {

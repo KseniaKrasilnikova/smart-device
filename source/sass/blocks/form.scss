@@ -4,27 +4,8 @@
   align-items: flex-start;
   justify-content: space-between;
   box-sizing: border-box;
-  max-width: 600px;
-  min-height: 466px;
 
   color: #ffffff;
-
-  @media (min-width: $desktop-width) {
-    position: absolute;
-    right: 19.5%;
-    top: 13.5%;
-  }
-
-  @media (max-width: $tablet-width-only) {
-    margin: 0 auto;
-    padding: 80px 0 0 0;
-    min-height: 478px;
-  }
-
-  @media (max-width: $mobile-width-only) {
-    max-width: 290px;
-    padding: 30px 0 0 0;
-  }
 }
 
 .form h3 {
@@ -32,19 +13,6 @@
 
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: normal;
-  font-size: 36px;
-  line-height: 51px;
-
-  @media (max-width: $tablet-width-only) {
-    font-size: 32px;
-    line-height: 45px;
-    margin-bottom: 17px;
-  }
-
-  @media (max-width: $mobile-width-only) {
-    font-size: 28px;
-    line-height: 39px;
-  }
 }
 
 .form__description {
@@ -92,11 +60,26 @@
 }
 
 .form__textarea {
-  margin-bottom: 40px;
+
+}
+
+.form__required input {
+  height: 50px;
+  width: 269px;
+  border: 1px solid #19baff;
+
+  @media (max-width: $tablet-width-only) {
+    height: 52px;
+    width: 280px;
+  }
 
   @media (max-width: $mobile-width-only) {
-    margin-bottom: 24px;
+    width: 290px;
   }
+}
+
+.form__textarea textarea {
+  resize: none;
 }
 
 .form__required input,
@@ -135,53 +118,12 @@
   line-height: 22px;
 }
 
-.form__required input {
-  height: 50px;
-  width: 269px;
-  border: 1px solid #19baff;
-
-  @media (max-width: $tablet-width-only) {
-    height: 52px;
-    width: 280px;
-  }
-
-  @media (max-width: $mobile-width-only) {
-    width: 290px;
-  }
-}
-
-.form__textarea textarea {
-  height: 154px;
-  width: 570px;
-  resize: none;
-
-  @media (max-width: $tablet-width-only) {
-    height: 160px;
-    width: 590px;
-  }
-
-  @media (max-width: $mobile-width-only) {
-    height: 99px;
-    width: 290px;
-  }
-}
-
 .form__submit {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
-
-  @media (max-width: $mobile-width-only) {
-    flex-direction: column;
-    align-items: flex-start;
-    height: 108px;
-  }
 }
 
 .form__submit input {
-  width: 270px;
   padding: 14px 78px;
 
   background: transparent;
@@ -202,19 +144,10 @@
     background-color: #ffffff;
     color: $mainColor;
   }
-
-  @media (max-width: $tablet-width-only) {
-    width: 280px;
-  }
-
-  @media (max-width: $mobile-width-only) {
-    width: 290px;
-  }
 }
 
 .form__note {
   display: block;
-  max-width: 230px;
   margin-left: 35px;
 
   font-size: 14px;

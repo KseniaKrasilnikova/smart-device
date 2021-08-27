@@ -1,0 +1,20 @@
+.popup {
+  display: none;
+
+  z-index: 2;
+  margin: 0 auto;
+  position: fixed;
+  left: 50%;
+  top: 37.8%;
+  transform: translate(-50%, -50%);
+
+  max-width: 728px;
+  min-height: 444px;
+
+  text-align: left;
+  background-color: $mainColor;
+}
+
+.popup__show {
+  display: flex;
+}

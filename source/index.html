@@ -62,7 +62,7 @@
   </header>
   <main>
     <h1 class="visually-hidden">Компания по производству, монтажу и поставке электронных компонентов</h1>
-    <section class="intro wrapper">
+    <section class="intro intro__wrapper">
       <h2 class="visually-hidden">Печатные платы</h2>
       <div class="intro__nav">
         <h2>Печатные платы</h2>
@@ -201,9 +201,9 @@
     </section>
     <section id="feedback" class="feedback">
       <h2 class="visually-hidden">Задать вопрос компании Smart Device</h2>
-      <form class="form" action="https://echo.htmlacademy.ru" method="post" enctype="multipart/form-data"
+      <form class="form question-form" action="https://echo.htmlacademy.ru" method="post" enctype="multipart/form-data"
             autocomplete="off" autocapitalize="off">
-        <h3 class="form__title">Остались вопросы? Задайте их нам!</h3>
+        <h3>Остались вопросы? Задайте их нам!</h3>
         <p class="form__description">Мы проконсультируем Вас бесплатно</p>
         <div class="form__body">
         <div class="form__required">
@@ -216,17 +216,17 @@
             <input id="phone" type="tel" placeholder="Телефон" minlength="17" maxlength="17" required>
           </label>
         </div>
-        <div class="form__textarea">
+        <div class="form__textarea question-form__textarea">
           <label for="question"></label>
           <textarea id="question" name="question" rows="10" placeholder="Ваш вопрос"></textarea>
         </div>
-          <div class="form__submit">
+          <div class="form__submit question-form__submit">
             <input id="form-submit" type="submit" value="Задать вопрос">
             <div class="form__check">
               <label for="check">
                 <input id="check" type="checkbox" checked>
                 <span class="form__tick"></span>
-                <span class="form__note">Я согласен на обработку  персональных данных</span>
+                <span class="form__note question-form__note">Я согласен на обработку  персональных данных</span>
               </label>
             </div>
           </div>
@@ -338,6 +338,51 @@
       <p><a href="#">Developed by wow studio</a></p>
     </div>
   </footer>
+
+  <!--<template id="call">-->
+  <div class="popup-overlay overlay-call"></div>
+  <div class="popup call <!--popup__show-->">
+    <div class="call__button">
+      <button type="button" aria-label="Закрыть окно">
+        <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M0.146522 0.853553C-0.04874 0.658291 -0.04874 0.341709 0.146522 0.146447C0.341784 -0.0488155 0.658367 -0.0488156 0.853629 0.146447L8.27821 7.57103L15.7028 0.14645C15.8981 -0.0488124 16.2146 -0.0488125 16.4099 0.14645C16.6052 0.341712 16.6052 0.658294 16.4099 0.853556L8.98532 8.27814L16.41 15.7028C16.6052 15.8981 16.6052 16.2146 16.41 16.4099C16.2147 16.6052 15.8981 16.6052 15.7029 16.4099L8.27821 8.98525L0.853553 16.4099C0.658291 16.6052 0.341709 16.6052 0.146447 16.4099C-0.0488155 16.2146 -0.0488156 15.8981 0.146447 15.7028L7.57111 8.27814L0.146522 0.853553Z" fill="white"/>
+        </svg>
+      </button>
+    </div>
+    <div class="call__form-container">
+      <form class="form call__form" action="https://echo.htmlacademy.ru" method="post" autocomplete="off"
+            autocapitalize="off">
+        <h3>Закажите звонок</h3>
+        <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+        <div class="form__required call__required">
+          <label for="name">
+            <span class="form__comment visually-hidden" id="popup-name-error">Данные не верны</span>
+            <input id="popup-name" type="text" placeholder="Имя" required>
+          </label>
+          <label for="phone">
+            <span class="form__comment visually-hidden" id="popup-phone-error">Данные не верны</span>
+            <input id="popup-phone" type="tel" placeholder="Телефон" minlength="17" maxlength="17" required>
+          </label>
+        </div>
+        <div class="form__textarea call__textarea">
+          <label for="call-question"></label>
+          <textarea id="call-question" name="question" rows="10" placeholder="Ваш вопрос"></textarea>
+        </div>
+        <div class="form__submit call__submit">
+          <input id="call-submit" type="submit" value="Отправить">
+          <div class="form__check">
+            <label for="call-check">
+              <input id="call-check" type="checkbox" checked>
+              <span class="form__tick"></span>
+              <span class="form__note call__note">Я согласен на обработку  персональных данных</span>
+            </label>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!--</template>-->
+
 </div>
 <script src="js/picturefill.js"></script>
 <script src="js/script.js" type="text/javascript"></script>

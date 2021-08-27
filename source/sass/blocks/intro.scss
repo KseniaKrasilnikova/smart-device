@@ -21,6 +21,21 @@
   }
 }
 
+.intro__wrapper {
+  @media (min-width: $desktop-width) {
+    padding: 0 13.2%;
+    box-sizing: border-box;
+  }
+
+  @media (max-width: $tablet-width-only) {
+    padding: 0 11.7%;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    padding: 0 5%;
+  }
+}
+
 .intro__nav {
   position: relative;
   display: flex;
