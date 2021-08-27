@@ -17,6 +17,12 @@
   background-color: transparent;
   border: 1px solid #ffffff;
 
+  &:hover,
+  &:focus {
+    color: #1b2d37;
+    background-color: #ffffff;
+  }
+
   @media (max-width: $tablet-width-only) {
     display: none;
   }
@@ -29,10 +35,23 @@
   text-align: center;
   background-color: $mainColor;
   border: 1px solid $mainColor;
+
+  &:hover,
+  &:focus {
+    color: $mainColor;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+  }
 }
 
 .button--about {
   padding: 14px 48px;
   color: $mainColor;
   border: 1px solid $mainColor;
+
+  &:hover,
+  &:focus {
+    color: #ffffff;
+    background-color: $mainColor;
+  }
 }

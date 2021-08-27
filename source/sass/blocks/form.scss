@@ -135,10 +135,10 @@
   line-height: 22px;
 }
 
-
 .form__required input {
   height: 50px;
   width: 269px;
+  border: 1px solid #19baff;
 
   @media (max-width: $tablet-width-only) {
     height: 52px;
