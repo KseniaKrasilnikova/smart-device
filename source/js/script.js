@@ -26,7 +26,6 @@ var jsOn = function () {
 
 
 // mask for phone input in form
-
 var setupForm = function () {
   window.addEventListener('DOMContentLoaded', function () {
     var input = document.getElementById('phone');
@@ -69,6 +68,64 @@ var setupForm = function () {
 
   });
 };
+
+// validation of feedback form
+
+var formPhone = document.getElementById('phone');
+var formName = document.getElementById('name');
+var phoneError = document.getElementById('phone-error');
+var nameError = document.getElementById('name-error');
+var formSubmitBtn = document.getElementById('form-submit');
+var formInputs = document.querySelectorAll('.input');
+var formErrors = document.querySelectorAll('.form__comment');
+
+var validateName = function (inputElement, errorElement) {
+  var nameIsValid = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/.test(inputElement.value);
+  if (nameIsValid) {
+    inputElement.classList.remove('form__input--invalid');
+    inputElement.blur();
+    errorElement.classList.add('visually-hidden');
+  } else {
+    inputElement.classList.remove('form__input--invalid');
+    inputElement.blur();
+    errorElement.classList.remove('visually-hidden');
+  }
+  return nameIsValid;
+};
+
+var validatePhone = function (inputElement, errorElement) {
+  var phoneNmbIsValid = /^\d{10}$/.test(inputElement.value);
+  if (phoneNmbIsValid) {
+    inputElement.classList.remove('form__input--invalid');
+    inputElement.blur();
+    errorElement.classList.add('visually-hidden');
+  } else {
+    inputElement.classList.add('form__input--invalid');
+    inputElement.blur();
+    errorElement.classList.remove('visually-hidden');
+  }
+  return phoneNmbIsValid;
+};
+
+var isFormValid = function () {
+  return validateName(formName, nameError) & validatePhone(formPhone, phoneError);
+};
+
+var resetForm = function (inputElements, errorElements) {
+  for (var i = 0; i < inputElements.length; i++) {
+    inputElements[i].value = null;
+    inputElements[i].classList.remove('form__input--invalid');
+  }
+  for (i = 0; i < errorElements.length; i++) {
+    errorElements[i].classList.add('visually-hidden');
+  }
+};
+
+formSubmitBtn.addEventListener('click', function () {
+  if (isFormValid()) {
+    resetForm(formInputs, formErrors);
+  }
+});
 
 jsOn();
 setupAccordeon();

@@ -209,12 +209,12 @@
         <div class="form__body">
         <div class="form__required">
           <label for="name">
+            <span class="form__comment visually-hidden" id="name-error">Данные не верны</span>
             <input id="name" type="text" placeholder="Имя" required>
           </label>
-          <label class="form__label" for="phone">
-            <!--<span class="form__comment visually-hidden" id="phone-error">Данные не верны</span>-->
-           <!-- <span class="form__code">+7</span>-->
-            <input class="phone" id="phone" type="tel" placeholder="Телефон" minlength="17" maxlength="17" required>
+          <label for="phone">
+            <span class="form__comment visually-hidden" id="phone-error">Данные не верны</span>
+            <input id="phone" type="tel" placeholder="Телефон" minlength="17" maxlength="17" required>
           </label>
         </div>
 
@@ -224,7 +224,7 @@
         </div>
 
           <div class="form__submit">
-            <input type="submit" value="Задать вопрос">
+            <input id="form-submit" type="submit" value="Задать вопрос">
 
             <div class="form__check">
               <label for="check">

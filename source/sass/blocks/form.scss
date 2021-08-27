@@ -222,6 +222,8 @@
   opacity: 80%;
 }
 
+// custom checkbox
+
 .form__check input {
   position: absolute;
   appearance: none;
@@ -240,7 +242,24 @@
 }
 
 .form__check input:checked + .form__tick {
-  background-image: url(../img/check.svg);
+  background-image: url("../img/check.svg");
   background-repeat: no-repeat;
   background-position: center;
+}
+
+// validation
+
+.form__required input.form__input--invalid {
+  border: 1px solid #ffffff;
+}
+
+.form__comment {
+  position: absolute;
+  margin-top: -16px;
+
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14.63px;
+  text-align: left;
 }
