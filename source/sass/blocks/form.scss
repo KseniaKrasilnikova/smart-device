@@ -44,19 +44,7 @@
 
 .form__required {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
-  margin-bottom: 37px;
-
-  @media (max-width: $mobile-width-only) {
-    flex-direction: column;
-  }
-
-  @media (max-width: $mobile-width-only) {
-    min-height: 134px;
-  }
 }
 
 .form__textarea {
@@ -89,20 +77,11 @@
   background-color: #19baff;
   border: none;
   opacity: 80%;
-  padding: 14px 16px;
 
   &:focus,
   &:hover {
     outline: none;
     border: 1px solid #ffffff;
-  }
-
-  @media (max-width: $tablet-width-only) {
-    padding: 14px 24px;
-  }
-
-  @media (max-width: $mobile-width-only) {
-    padding: 7px 17px;
   }
 }
 
@@ -148,8 +127,6 @@
 
 .form__note {
   display: block;
-  margin-left: 35px;
-
   font-size: 14px;
   line-height: 16px;
   opacity: 80%;

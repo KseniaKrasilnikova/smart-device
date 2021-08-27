@@ -206,7 +206,7 @@
         <h3>Остались вопросы? Задайте их нам!</h3>
         <p class="form__description">Мы проконсультируем Вас бесплатно</p>
         <div class="form__body">
-        <div class="form__required">
+        <div class="form__required question-form__required">
           <label for="name">
             <span class="form__comment visually-hidden" id="name-error">Данные не верны</span>
             <input id="name" type="text" placeholder="Имя" required>
@@ -341,7 +341,7 @@
 
   <!--<template id="call">-->
   <div class="popup-overlay overlay-call"></div>
-  <div class="popup call <!--popup__show-->">
+  <div class="popup call popup__show">
     <div class="call__button">
       <button type="button" aria-label="Закрыть окно">
         <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -352,9 +352,16 @@
     <div class="call__form-container">
       <form class="form call__form" action="https://echo.htmlacademy.ru" method="post" autocomplete="off"
             autocapitalize="off">
+
+
         <h3>Закажите звонок</h3>
-        <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
         <div class="form__required call__required">
+
+        <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+
+<!--
+        <div class="form__required call__required">
+-->
           <label for="name">
             <span class="form__comment visually-hidden" id="popup-name-error">Данные не верны</span>
             <input id="popup-name" type="text" placeholder="Имя" required>
@@ -363,11 +370,13 @@
             <span class="form__comment visually-hidden" id="popup-phone-error">Данные не верны</span>
             <input id="popup-phone" type="tel" placeholder="Телефон" minlength="17" maxlength="17" required>
           </label>
-        </div>
+
         <div class="form__textarea call__textarea">
           <label for="call-question"></label>
           <textarea id="call-question" name="question" rows="10" placeholder="Ваш вопрос"></textarea>
         </div>
+
+    </div>
         <div class="form__submit call__submit">
           <input id="call-submit" type="submit" value="Отправить">
           <div class="form__check">
