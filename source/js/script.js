@@ -3,17 +3,17 @@
 // accordeon in footer
 var setupAccordeon = function () {
   var accordeonButtons = document.getElementsByClassName('accordeon__btn');
-  for (var i = 0; i < accordeonButtons.length; i++) {
-    accordeonButtons[i].addEventListener('click', function () {
+  Array.prototype.slice.call(accordeonButtons).forEach(function (button) {
+    button.addEventListener('click', function () {
 
       for (var j = 0; j < accordeonButtons.length; j++) {
-        if (accordeonButtons[j] !== this) {
+        if (accordeonButtons[j] !== button) {
           accordeonButtons[j].classList.remove('accordeon--active');
         }
       }
-      this.classList.toggle('accordeon--active');
+      button.classList.toggle('accordeon--active');
     });
-  }
+  });
 };
 
 // no-JS in accordion
@@ -117,11 +117,13 @@ var setupForm = function () {
     }
   });
 
-  // mask for phone input in form
+  // Mask for phone input in form
   var keyCode;
 
-  var mask = function (event) {
-    event.keyCode && (keyCode = event.keyCode);
+  var Mask = function (event) {
+    if (event.keyCode === true) {
+      keyCode = event.keyCode;
+    }
     var pos = this.selectionStart;
     if (pos < 3) {
       event.preventDefault();
@@ -135,7 +137,9 @@ var setupForm = function () {
     });
     i = newValue.indexOf('_');
     if (i !== -1) {
-      i < 5 && (i = 3);
+      if (i < 5) {
+        i = 3;
+      }
       newValue = newValue.slice(0, i);
     }
     var reg = matrix.substr(0, this.value.length).replace(/_+/g, function (a) {
@@ -150,14 +154,14 @@ var setupForm = function () {
     }
   };
 
-  formPhone.addEventListener('input', mask, false);
-  formPhone.addEventListener('focus', mask, false);
-  formPhone.addEventListener('blur', mask, false);
-  formPhone.addEventListener('keydown', mask, false);
-  popupFormPhone.addEventListener('input', mask, false);
-  popupFormPhone.addEventListener('focus', mask, false);
-  popupFormPhone.addEventListener('blur', mask, false);
-  popupFormPhone.addEventListener('keydown', mask, false);
+  formPhone.addEventListener('input', Mask, false);
+  formPhone.addEventListener('focus', Mask, false);
+  formPhone.addEventListener('blur', Mask, false);
+  formPhone.addEventListener('keydown', Mask, false);
+  popupFormPhone.addEventListener('input', Mask, false);
+  popupFormPhone.addEventListener('focus', Mask, false);
+  popupFormPhone.addEventListener('blur', Mask, false);
+  popupFormPhone.addEventListener('keydown', Mask, false);
 };
 
 // popup
