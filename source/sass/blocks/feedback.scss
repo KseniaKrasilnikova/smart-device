@@ -4,10 +4,14 @@
   background-color: $mainColor;
 
   @media (min-width: $desktop-width) {
-    background-image: url("../img/plane-bg-desktop.png");
+    background-image: url("../img/plane-bg-desktop@1x.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: -60px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/plane-bg-desktop@2x.png");
+    }
   }
 
   @media (max-width: $tablet-width-only) {
