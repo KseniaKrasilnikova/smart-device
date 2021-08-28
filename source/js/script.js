@@ -24,10 +24,8 @@ var jsOn = function () {
   }
 };
 
-
+// validation of feedback form and popup form
 var setupForm = function () {
-
-  // validation of feedback form
   var formPhone = document.getElementById('phone');
   var popupFormPhone = document.getElementById('popup-phone');
   var formName = document.getElementById('name');
@@ -110,11 +108,12 @@ var setupForm = function () {
       event.preventDefault();
     }
   });
+
   popupFormSubmitBtn.addEventListener('click', function (event) {
+    event.preventDefault();
     if (isPopupFormValid()) {
+      saveCallFormData();
       resetForm(popupFormInputs, popupFormErrors);
-    } else {
-      event.preventDefault();
     }
   });
 
@@ -160,6 +159,41 @@ var setupForm = function () {
   popupFormPhone.addEventListener('blur', mask, false);
   popupFormPhone.addEventListener('keydown', mask, false);
 };
+
+// popup
+var popupCall = document.querySelector('.call');
+var overlayCall = document.querySelector('.overlay-call');
+var popupCloseBtn = popupCall.querySelector('.call__button button');
+var popupOpenBtn = document.querySelector('.open-popup-btn');
+
+var openPopupCall = function (evt) {
+  evt.preventDefault();
+  popupCall.classList.add('popup__show');
+  overlayCall.classList.add('popup-overlay__show');
+  document.getElementById('popup-name').focus();
+};
+
+var closePopupCall = function (evt) {
+  if (evt.button === 0 || evt.key === 'Escape') {
+    popupCall.classList.remove('popup__show');
+    overlayCall.classList.remove('popup-overlay__show');
+  }
+};
+
+document.addEventListener('keydown', closePopupCall, true);
+overlayCall.addEventListener('mousedown', closePopupCall, true);
+popupCloseBtn.addEventListener('mousedown', closePopupCall, true);
+popupOpenBtn.addEventListener('mousedown', openPopupCall, true);
+
+// localstorage
+var callForm = popupCall.querySelector('.call__form');
+var saveCallFormData = function () {
+  localStorage.setItem('popup-name', document.getElementById('popup-name').value);
+  localStorage.setItem('popup-phone', document.getElementById('popup-phone').value);
+  localStorage.setItem('call-question', document.getElementById('call-question').value);
+};
+
+callForm.addEventListener('submit', saveCallFormData, true);
 
 jsOn();
 setupAccordeon();
