@@ -50,7 +50,6 @@
 .form__required input {
   height: 50px;
   width: 269px;
-  border: 1px solid #19baff;
 
   @media (max-width: $tablet-width-only) {
     height: 52px;
@@ -71,7 +70,7 @@
   box-sizing: border-box;
   font-size: 16px;
   background-color: #19baff;
-  border: none;
+  border: 1px solid #19baff;
   opacity: 80%;
 }
 
