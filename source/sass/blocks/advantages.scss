@@ -1,4 +1,16 @@
 .advantages {
+  @media (min-width: $desktop-width) {
+    padding: 0 19.5% 0 17.7%;
+  }
+
+  @media (max-width: $tablet-width-only) {
+    padding: 0 3.3%;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    padding: 0 5%;
+  }
+
   ul {
     display: flex;
     flex-direction: row;
@@ -6,14 +18,14 @@
     justify-content: space-between;
 
     padding: 0;
-    margin: 109px 0 0 0;
+    margin: 78px 0 0 0;
 
     @media (max-width: $tablet-width-only) {
-      margin: 52px 0 0 0;
+      margin: 21px 0 0 0;
     }
 
     @media (max-width: $mobile-width-only) {
-      margin: 37px 0 0 0;
+      margin: 6px 0 0 0;
     }
   }
 
@@ -54,6 +66,7 @@
   align-items: flex-start;
   height: 100%;
   box-sizing: border-box;
+  margin-top: 31px;
 
   list-style: none;
   background-color: #ffffff;
@@ -65,14 +78,17 @@
     min-height: 299px;
     max-width: 570px;
     padding: 38px 42px 65px;
+    margin-left: 31px;
+    flex-basis: 570px;
   }
 
   @media (max-width: $tablet-width-only) {
     padding: 23px 24px 18px 21px;
+    flex-basis: 338px;
+    margin-left: 0;
   }
 
   @media (min-width: $tablet-width) {
-    flex-basis: 570px;
     min-height: 232px;
     min-width: 345px;
   }
@@ -81,7 +97,6 @@
     width: 100%;
     min-width: 290px;
     min-height: 212px;
-    margin-bottom: 20px;
     padding: 23px 14px 37px 21px;
   }
 
@@ -101,14 +116,6 @@
 
     svg {
       fill: #ffffff;
-    }
-  }
-
-  &:not(:first-child) {
-    margin-left: 34px;
-
-    @media (max-width: $mobile-width-only) {
-      margin: 0;
     }
   }
 }

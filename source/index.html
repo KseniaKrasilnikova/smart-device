@@ -15,7 +15,8 @@
     <div class="logo">
       <picture>
         <!-- 1х: 52px; 2x: 104px -->
-        <img class="logo__header" src="img/logo@1x.png" srcset="img/logo@2x.png 2x" alt="Логотип компании Smart Device" height="52" width="52">
+        <img class="logo__header" src="img/logo@1x.png" srcset="img/logo@2x.png 2x" alt="Логотип компании Smart Device"
+             height="52" width="52">
       </picture>
       <div class="logo__sign logo__sign--none">
         <span class="logo__text logo__text--title logo__text--light">Smart Device</span>
@@ -77,12 +78,12 @@
         <a href="#advantages" class="intro__scroll">Скролл вниз</a>
       </div>
     </section>
-    <div class="block container">
+    <div class="block">
       <section id="advantages" class="advantages">
         <h2 class="visually-hidden">Преимущества компании Smart Device</h2>
         <ul>
-          <div class="advantages__row">
-            <li>
+          <!-- <span class="advantages__row">-->
+          <li>
             <span>
               <svg width="30" height="37" viewBox="0 0 30 37" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -95,11 +96,11 @@
                 d="M15.3077 12.0974C14.9215 12.0974 14.6081 11.7822 14.6081 11.394C14.6081 11.0058 14.9215 10.6907 15.3077 10.6907C15.6939 10.6907 16.0073 11.0058 16.0073 11.394C16.0073 11.7822 15.6939 12.0974 15.3077 12.0974Z"/>
             </svg>
             </span>
-              <h3>Оперативные сроки</h3>
-              <p>Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и
-                доставлять заказы плат и комплектующих в самые короткие сроки</p>
-            </li>
-            <li>
+            <h3>Оперативные сроки</h3>
+            <p>Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и
+              доставлять заказы плат и комплектующих в самые короткие сроки</p>
+          </li>
+          <li>
             <span>
               <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -114,13 +115,13 @@
                   d="M17.9832 31.0987C17.8562 30.9716 17.6798 30.8984 17.5 30.8984C17.3202 30.8984 17.1438 30.9716 17.0167 31.0987C16.8896 31.2259 16.8164 31.4022 16.8164 31.582C16.8164 31.7618 16.8895 31.9382 17.0167 32.0653C17.1439 32.1925 17.3202 32.2656 17.5 32.2656C17.6798 32.2656 17.8562 32.1925 17.9832 32.0653C18.1104 31.9382 18.1836 31.7618 18.1836 31.582C18.1836 31.4022 18.1104 31.2259 17.9832 31.0987Z"/>
               </svg>
             </span>
-              <h3>Крупные поставщики</h3>
-              <p>Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND.
-                Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.</p>
-            </li>
-          </div>
-          <div class="advantages__row">
-            <li>
+            <h3>Крупные поставщики</h3>
+            <p>Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND.
+              Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.</p>
+          </li>
+          <!--</span>
+          <span class="advantages__row">-->
+          <li>
             <span>
               <svg width="36" height="31" viewBox="0 0 36 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -135,10 +136,10 @@
                   d="M25.0312 28.1677C26.9698 28.1677 28.5469 26.5793 28.5469 24.6274C28.5469 24.2363 28.2321 23.9194 27.8438 23.9194C27.4554 23.9194 27.1406 24.2363 27.1406 24.6274C27.1406 25.7985 26.1944 26.7516 25.0312 26.7516C24.6429 26.7516 24.3281 27.0686 24.3281 27.4597C24.3281 27.8505 24.6429 28.1677 25.0312 28.1677Z"/>
               </svg>
             </span>
-              <h3>Полная конфиденциальность</h3>
-              <p>По желанию клиента мы обеспечиваем полную конфеденциальность.</p>
-            </li>
-            <li>
+            <h3>Полная конфиденциальность</h3>
+            <p>По желанию клиента мы обеспечиваем полную конфеденциальность.</p>
+          </li>
+          <li>
             <span>
               <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -155,14 +156,14 @@
                   d="M9.98812 19.6269C9.86104 19.4998 9.68528 19.4266 9.50488 19.4266C9.3251 19.4266 9.14941 19.4998 9.02158 19.6269C8.89443 19.7541 8.82129 19.9305 8.82129 20.111C8.82129 20.2908 8.89437 20.4672 9.02158 20.5944C9.14873 20.7215 9.3251 20.7947 9.50488 20.7947C9.68535 20.7947 9.86104 20.7215 9.98812 20.5944C10.1159 20.4665 10.1891 20.2908 10.1891 20.111C10.1891 19.9305 10.1159 19.7548 9.98812 19.6269Z"/>
               </svg>
             </span>
-              <h3>Персонализация стоимости</h3>
-              <p>Мы подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас
-                устраивает.</p>
-            </li>
-          </div>
+            <h3>Персонализация стоимости</h3>
+            <p>Мы подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас
+              устраивает.</p>
+          </li>
+          <!--          </span>-->
         </ul>
       </section>
-      <section class="about">
+      <section class="about container">
         <h2 class="visually-hidden">Подробнее о компании Smart Device</h2>
         <div class="about__content">
           <div class="about__pic"></div>
@@ -195,9 +196,11 @@
               </div>
               <picture>
                 <!-- 1х: 370px; 2x: 740px -->
-                <source media="(min-width: 1024px)" srcset="img/making-board-desktop@1x.jpg 1x, img/making-board-desktop@2x.jpg 2x">
+                <source media="(min-width: 1024px)"
+                        srcset="img/making-board-desktop@1x.jpg 1x, img/making-board-desktop@2x.jpg 2x">
                 <!-- 1х: 715px; 2x: 1430 -->
-                <source media="(min-width: 768px)" srcset="img/making-board-tablet@1x.jpg 1x, img/making-board-tablet@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                        srcset="img/making-board-tablet@1x.jpg 1x, img/making-board-tablet@2x.jpg 2x">
                 <!-- 1х: 290px; 2x: 580px -->
                 <img src="img/making-board-mobile@1x.jpg" srcset="img/making-board-mobile@2x.jpg 2x"
                      alt="Производство печатных плат" width="290" height="256">
@@ -212,11 +215,14 @@
               </div>
               <picture>
                 <!-- 1х: 370px; 2x: 740px -->
-                <source media="(min-width: 1024px)" srcset="img/mounting-board-desktop@1x.jpg 1x, img/mounting-board-desktop@2x.jpg 2x">
+                <source media="(min-width: 1024px)"
+                        srcset="img/mounting-board-desktop@1x.jpg 1x, img/mounting-board-desktop@2x.jpg 2x">
                 <!-- 1х: 715px; 2x: 1430 -->
-                <source media="(min-width: 768px)" srcset="img/mounting-board-tablet@1x.jpg 1x, img/mounting-board-tablet@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                        srcset="img/mounting-board-tablet@1x.jpg 1x, img/mounting-board-tablet@2x.jpg 2x">
                 <!-- 1х: 290px; 2x: 580px -->
-                <img src="img/mounting-board-mobile@1x.jpg" srcset="img/making-board-mobile@2x.jpg 2x" alt="Монтаж печатных плат"
+                <img src="img/mounting-board-mobile@1x.jpg" srcset="img/making-board-mobile@2x.jpg 2x"
+                     alt="Монтаж печатных плат"
                      width="290" height="256">
               </picture>
             </a>
@@ -231,9 +237,10 @@
                 <!-- 1х: 370px; 2x: 740px -->
                 <source media="(min-width: 1024px)" srcset="img/diode-desktop@1x.jpg 1x, img/diode-desktop@2x.jpg 2x">
                 <!-- 1х: 715px; 2x: 1430 -->
-                <source media="(min-width: 768px)" srcset="img/diode-tablet@1x.jpg 1x, img/diode-tablet@2x.jpg 2">
+                <source media="(min-width: 768px)" srcset="img/diode-tablet@1x.jpg 1x, img/diode-tablet@2x.jpg 2x">
                 <!-- 1х: 290px; 2x: 580px -->
-                <img src="img/diode-mobile@1x.jpg" srcset="img/making-board-mobile@2x.jpg 2x" alt="Диодная лента" width="290"
+                <img src="img/diode-mobile@1x.jpg" srcset="img/making-board-mobile@2x.jpg 2x" alt="Диодная лента"
+                     width="290"
                      height="256">
               </picture>
             </a>
@@ -282,7 +289,8 @@
         <div class="logo">
           <picture>
             <!-- 1х: 52px; 2x: 104px -->
-            <img src="img/logo@1x.png" srcset="img/logo@2x.png 2x" alt="Логотип компании Smart Device" height="52" width="52">
+            <img src="img/logo@1x.png" srcset="img/logo@2x.png 2x" alt="Логотип компании Smart Device" height="52"
+                 width="52">
           </picture>
           <div class="logo__sign">
             <span class="logo__text logo__text--title logo__text--dark">Smart Device</span>
@@ -402,11 +410,11 @@
         <h3>Закажите звонок</h3>
         <div class="form__required call__required">
           <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
-          <label for="name">
+          <label for="popup-name">
             <span class="form__comment visually-hidden" id="popup-name-error">Данные не верны</span>
             <input id="popup-name" type="text" placeholder="Имя">
           </label>
-          <label for="phone">
+          <label for="popup-phone">
             <span class="form__comment visually-hidden" id="popup-phone-error">Данные не верны</span>
             <input id="popup-phone" type="tel" placeholder="Телефон" minlength="17" maxlength="17">
           </label>
