@@ -173,7 +173,7 @@ var popupOpenBtn = document.querySelector('.open-popup-btn');
 var openPopupCall = function (evt) {
   evt.preventDefault();
   popupCall.classList.add('popup__show');
-  overlayCall.classList.add('popup-overlay__show');
+  overlayCall.classList.add('popup-overlay--show');
   document.getElementById('popup-name').focus();
   document.getElementsByTagName('body')[0].style.overflow = 'hidden';
 };
@@ -181,7 +181,8 @@ var openPopupCall = function (evt) {
 var closePopupCall = function (evt) {
   if (evt.button === 0 || evt.key === 'Escape') {
     popupCall.classList.remove('popup__show');
-    overlayCall.classList.remove('popup-overlay__show');
+    overlayCall.classList.remove('popup-overlay--show');
+    document.getElementsByTagName('body')[0].style.overflow = '';
   }
 };
 

@@ -72,13 +72,17 @@
   background-color: #19baff;
   border: 1px solid #19baff;
   opacity: 80%;
+  color: #000000;
+
+  &::placeholder {
+    color: #ffffff;
+  }
 }
 
 .form__required input,
 .form__required input::placeholder,
 .form__textarea textarea,
 .form__textarea textarea::placeholder {
-  color: #ffffff;
   font-family: "PT Mono", "Courier", monospace;
   font-style: normal;
   font-weight: normal;
