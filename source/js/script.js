@@ -175,6 +175,7 @@ var openPopupCall = function (evt) {
   popupCall.classList.add('popup__show');
   overlayCall.classList.add('popup-overlay__show');
   document.getElementById('popup-name').focus();
+  document.getElementsByTagName('body')[0].style.overflow = 'hidden';
 };
 
 var closePopupCall = function (evt) {
