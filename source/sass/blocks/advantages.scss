@@ -119,19 +119,3 @@
     }
   }
 }
-
-.advantages__row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: center;
-  margin-bottom: 30px;
-
-  @media (max-width: $mobile-width-only) {
-    flex-direction: column;
-  }
-
-  @media (max-width: $mobile-width-only) {
-    margin: 0 0 16px 0;
-  }
-}
