@@ -1,17 +1,29 @@
 .block {
   min-height: 1153px;
 
-  background-image: url("../img/triangels-bg-grey-desktop.png");
+  background-image: url("../img/triangels-bg-grey-desktop@1x.png");
   background-repeat: no-repeat;
   background-color: #ffffff;
 
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/triangels-bg-grey-desktop@2x.png");
+  }
+
   @media (max-width: $tablet-width-only) {
-    min-height: 1061px;
-    background-image: url("../img/triangels-bg-grey-tablet.png");
+    min-height: 1092px;
+    background-image: url("../img/triangels-bg-grey-tablet@1x.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/triangels-bg-grey-tablet@2x.png");
+    }
   }
 
   @media (max-width: $mobile-width-only) {
-    min-height: 1759px;
-    background-image: url("../img/triangels-bg-grey-mobile.png");
+    min-height: 1813px;
+    background-image: url("../img/triangels-bg-grey-mobile@1x.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/triangels-bg-grey-mobile@2x.png");
+    }
   }
 }

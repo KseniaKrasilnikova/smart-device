@@ -1,6 +1,7 @@
 .main-contacts ul {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0 35px 0 0;
   list-style: none;

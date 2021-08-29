@@ -53,10 +53,6 @@
     line-height: 22px;
     color: #666666;
   }
-
-  svg {
-    fill: $mainColor;
-  }
 }
 
 .advantages li {
@@ -82,15 +78,16 @@
     flex-basis: 570px;
   }
 
+  @media (min-width: $tablet-width) {
+    min-height: 232px;
+    min-width: 345px;
+    height: auto;
+  }
+
   @media (max-width: $tablet-width-only) {
     padding: 23px 24px 18px 21px;
     flex-basis: 338px;
     margin-left: 0;
-  }
-
-  @media (min-width: $tablet-width) {
-    min-height: 232px;
-    min-width: 345px;
   }
 
   @media (max-width: $mobile-width-only) {

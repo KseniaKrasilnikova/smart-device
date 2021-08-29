@@ -62,16 +62,21 @@
   flex-direction: row;
   flex-wrap: nowrap;
   padding: 0 13.2% 0 0;
-  max-width: 995px;
   justify-content: space-between;
 
-  @media (max-width: $tablet-width-only) { /*1023*/
-    justify-content: space-around;
-    padding: 40px 0 36px;
+  @media (min-width: $desktop-width) {
+    max-width: 995px;
   }
 
-  @media (max-width: $mobile-width-only) { /*768*/
+  @media (max-width: $tablet-width-only) {
+    justify-content: space-around;
+    padding: 38px 0 36px;
+  }
+
+  @media (max-width: $mobile-width-only) {
     flex-direction: column;
+    max-width: 767px;
+
     padding: 0;
   }
 }

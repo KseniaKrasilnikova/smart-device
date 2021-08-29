@@ -1,7 +1,7 @@
 .call__button {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 15px;
+  right: 13px;
 
   padding: 0;
 
@@ -12,11 +12,12 @@
 }
 
 .call__button button {
-  padding: 0;
+  padding: 7px;
   margin: 0;
 
   border: none;
   background: transparent;
+  cursor: pointer;
 }
 
 .call__form-container {

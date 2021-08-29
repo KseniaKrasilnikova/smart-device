@@ -4,12 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Компания Smart Device предоставляет качественные услуги по производству и оборудованию печатных плат, а также комплектующих для светотехники. Задайте вопрос и получите консультацию">
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="preload" href="fonts/PTMono-Regular.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/RobotoCondensed-Bold.woff2" as="font" crossorigin="anonymous">
   <title>Smart Device</title>
 </head>
 <body>
+<div style="display: none">
+  <include src="build/img/sprite_auto.svg"></include>
+</div>
 <div class="content">
   <header class="header nav-bar">
     <div class="logo">
@@ -30,7 +33,7 @@
             <a href="#" class="main-contacts__link">
           <span class="main-contacts__icon">
           <svg width="25.33" height="18.67" xmlns="http://www.w3.org/2000/svg">
-            <use xlink:href="img/sprite_auto.svg#envelope"></use>
+            <use xlink:href="#envelope"></use>
           </svg>
           </span>
               <span class="main-contacts__text">info@sd.ru</span>
@@ -40,7 +43,7 @@
             <a href="#" class="main-contacts__link">
            <span class="main-contacts__icon">
           <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
-             <use xlink:href="img/sprite_auto.svg#phone-call"></use>
+             <use xlink:href="#phone-call"></use>
           </svg>
            </span>
               <span class="main-contacts__text">+7 (495) 000 52 52</span>
@@ -72,7 +75,7 @@
           <li>
             <span class="advantages__icon">
               <svg width="30" height="37" xmlns="http://www.w3.org/2000/svg">
-                <use xlink:href="img/sprite_auto.svg#stopwatch"></use>
+                <use xlink:href="#stopwatch"></use>
             </svg>
             </span>
             <h3>Оперативные сроки</h3>
@@ -82,7 +85,7 @@
           <li>
             <span class="advantages__icon">
               <svg width="35" height="35" xmlns="http://www.w3.org/2000/svg">
-                <use xlink:href="img/sprite_auto.svg#hired"></use>
+                <use xlink:href="#hired"></use>
               </svg>
             </span>
             <h3>Крупные поставщики</h3>
@@ -92,7 +95,7 @@
           <li>
             <span class="advantages__icon">
               <svg width="36" height="31" xmlns="http://www.w3.org/2000/svg">
-                <use xlink:href="img/sprite_auto.svg#detective"></use>
+                <use xlink:href="#detective"></use>
               </svg>
             </span>
             <h3>Полная конфиденциальность</h3>
@@ -101,7 +104,7 @@
           <li>
             <span class="advantages__icon">
               <svg width="35" height="35" xmlns="http://www.w3.org/2000/svg">
-                <use xlink:href="img/sprite_auto.svg#tag"></use>
+                <use xlink:href="#tag"></use>
               </svg>
             </span>
             <h3>Персонализация стоимости</h3>
@@ -253,7 +256,7 @@
               <a href="#" class="socials__link">
                 <span class="visually-hidden">Ссылка на Фейсбук</span>
                 <svg width="27" height="27" xmlns="http://www.w3.org/2000/svg">
-                  <use xlink:href="img/sprite_auto.svg#fb"></use>
+                  <use xlink:href="#fb"></use>
                 </svg>
               </a>
             </li>
@@ -261,7 +264,7 @@
               <a href="#" class="socials__link">
                 <span class="visually-hidden">Ссылка на Одноклассники</span>
                 <svg width="27" height="26" xmlns="http://www.w3.org/2000/svg">
-                  <use xlink:href="img/sprite_auto.svg#ok"></use>
+                  <use xlink:href="#ok"></use>
                 </svg>
               </a>
             </li>
@@ -269,7 +272,7 @@
               <a href="#" class="socials__link">
                 <span class="visually-hidden">Ссылка на Вконтакте</span>
                 <svg width="27" height="26" xmlns="http://www.w3.org/2000/svg">
-                  <use xlink:href="img/sprite_auto.svg#vk"></use>
+                  <use xlink:href="#vk"></use>
                 </svg>
               </a>
             </li>
@@ -281,10 +284,10 @@
           <div class="accordeon__btn">
             <h3>Разделы сайта</h3>
             <svg class="accordeon__plus no-js" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-              <use xlink:href="img/sprite_auto.svg#plus"></use>
+              <use xlink:href="#plus"></use>
             </svg>
             <svg class="accordeon__minus" width="16" height="2" xmlns="http://www.w3.org/2000/svg">
-              <use xlink:href="img/sprite_auto.svg#minus"></use>
+              <use xlink:href="#minus"></use>
             </svg>
           </div>
           <ul class="accordeon__content no-js">
@@ -301,10 +304,10 @@
           <div class="accordeon__btn">
             <h3>Наш офис</h3>
             <svg class="accordeon__plus no-js" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-              <use xlink:href="img/sprite_auto.svg#plus"></use>
+              <use xlink:href="#plus"></use>
             </svg>
             <svg class="accordeon__minus" width="16" height="2" xmlns="http://www.w3.org/2000/svg">
-              <use xlink:href="img/sprite_auto.svg#minus"></use>
+              <use xlink:href="#minus"></use>
             </svg>
           </div>
           <ul class="accordeon__content address__content no-js">
@@ -330,7 +333,7 @@
     <div class="call__button">
       <button type="button" aria-label="Закрыть окно">
         <svg width="17" height="17" xmlns="http://www.w3.org/2000/svg">
-          <use xlink:href="img/sprite_auto.svg#cross"></use>
+          <use xlink:href="#cross"></use>
         </svg>
       </button>
     </div>
