@@ -95,7 +95,7 @@
   justify-content: space-between;
 }
 
-.form__submit input {
+.form__submit > input {
   padding: 14px 78px;
 
   background: transparent;
@@ -143,8 +143,8 @@
     border: 1px solid #ff0000;
   }
 
-  &:focus + .form__tick, {
-    border: 1px solid #ff0000;
+  &:focus ~ .question-form__note, {
+    text-decoration: underline;
   }
 }
 
