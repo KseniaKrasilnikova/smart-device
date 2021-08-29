@@ -113,9 +113,13 @@
     p {
       color: #ffffff;
     }
-
-    svg {
-      fill: #ffffff;
-    }
   }
+}
+
+.advantages__icon svg {
+  fill: $mainColor;
+}
+
+.advantages li:hover .advantages__icon svg {
+  fill: #ffffff;
 }
