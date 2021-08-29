@@ -138,6 +138,10 @@
   &.form__input--invalid + .form__tick {
     border: 1px solid #ff0000;
   }
+
+  &:focus + .form__tick, {
+    border: 1px solid #ff0000;
+  }
 }
 
 .form__tick {
@@ -146,6 +150,11 @@
   height: 16px;
   background: transparent;
   border: 1px solid #ffffff;
+
+  &:hover,
+  &:focus {
+    border: 1px solid #000000;
+  }
 }
 
 .form__check input:checked + .form__tick {
