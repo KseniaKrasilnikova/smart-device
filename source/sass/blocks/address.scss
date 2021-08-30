@@ -1,9 +1,9 @@
 .address {
-  max-width: 340px;
+  max-width: 418px;
 
   @media (max-width: $mobile-width-only) {
     position: relative;
     max-width: 768px;
-    padding: 0 5%;
+    padding: 0 5.3%;
   }
 }
