@@ -166,17 +166,6 @@
   opacity: 0.5;
   text-align: left;
 
-  @media (min-width: $desktop-width) {
-/*    &:nth-child(3n) {
-      flex-grow: 1;
-      margin-left: 143px;
-    }*/
-
-/*    &:nth-child(2n) {
-      margin-left: 73px;
-    }*/
-  }
-
   @media (max-width: $tablet-width-only) {
     padding: 10px 0;
   }
