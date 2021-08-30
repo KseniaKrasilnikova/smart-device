@@ -97,5 +97,11 @@ gulp.task('clean', function () {
   return del('build');
 });
 
-gulp.task('build', gulp.series('clean', 'copy', 'css', 'sprite', 'html'));
+gulp.task('modules', function (done) {
+  gulp.src('node_modules/picturefill/dist/picturefill.min.js')
+      .pipe(gulp.dest('build/js'));
+  done();
+});
+
+gulp.task('build', gulp.series('clean', 'modules', 'copy', 'css', 'sprite', 'html'));
 gulp.task('start', gulp.series('build', 'server'));
