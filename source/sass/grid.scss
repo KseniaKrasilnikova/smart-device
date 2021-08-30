@@ -1,0 +1,38 @@
+.container {
+  height: inherit;
+
+  @media (min-width: $desktop-width) {
+    padding: 0 19.5%;
+  }
+
+  @media (max-width: $tablet-width-only) {
+    padding: 0 3.3%;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    padding: 0 5%;
+  }
+}
+
+.content {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-direction: column;
+}
+
+.wrapper {
+  @media (min-width: $desktop-width) {
+    padding: 0 13.2%;
+    box-sizing: border-box;
+  }
+
+  @media (max-width: $tablet-width-only) {
+    padding: 0 11.7%;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    padding: 0 5%;
+  }
+}

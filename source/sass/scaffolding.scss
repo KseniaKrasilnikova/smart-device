@@ -29,10 +29,6 @@ img {
   height: 100%;
 }
 
-button {
-  font-family: "Roboto Condensed", "Arial", sans-serif;
-}
-
 .visually-hidden:not(:focus):not(:active) {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -40,20 +36,4 @@ button {
   height: 1px;
   margin: -1px;
   font-size: 0;
-}
-
-.container {
-  height: inherit;
-
-  @media (min-width: $desktop-width) {
-    padding: 0 19.5%;
-  }
-
-  @media (max-width: $tablet-width-only) {
-    padding: 0 3.3%;
-  }
-
-  @media (max-width: $mobile-width-only) {
-    padding: 0 5%;
-  }
 }

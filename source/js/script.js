@@ -1,6 +1,5 @@
 'use strict';
 
-// accordeon in footer
 var setupAccordeon = function () {
   var accordeonButtons = document.getElementsByClassName('accordeon__btn');
   Array.prototype.slice.call(accordeonButtons).forEach(function (button) {
@@ -16,7 +15,6 @@ var setupAccordeon = function () {
   });
 };
 
-// no-JS in accordion
 var jsOn = function () {
   var elements = document.querySelectorAll('.no-js');
   for (var i = 0; i < elements.length; i++) {
@@ -24,7 +22,6 @@ var jsOn = function () {
   }
 };
 
-// validation of feedback form and popup form
 var setupForm = function () {
   var formPhone = document.getElementById('phone');
   var popupFormPhone = document.getElementById('popup-phone');
@@ -117,7 +114,6 @@ var setupForm = function () {
     }
   });
 
-  // Mask for phone input in form
   var keyCode;
 
   var Mask = function (event) {
@@ -164,7 +160,6 @@ var setupForm = function () {
   popupFormPhone.addEventListener('keydown', Mask, false);
 };
 
-// popup
 var popupCall = document.querySelector('.call');
 var overlayCall = document.querySelector('.overlay-call');
 var popupCloseBtn = popupCall.querySelector('.call__button button');
@@ -191,7 +186,6 @@ overlayCall.addEventListener('mousedown', closePopupCall, true);
 popupCloseBtn.addEventListener('mousedown', closePopupCall, true);
 popupOpenBtn.addEventListener('mousedown', openPopupCall, true);
 
-// localstorage
 var callForm = popupCall.querySelector('.call__form');
 var saveCallFormData = function () {
   localStorage.setItem('popup-name', document.getElementById('popup-name').value);
