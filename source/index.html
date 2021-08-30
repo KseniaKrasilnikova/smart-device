@@ -16,12 +16,12 @@
 </div>
 <div class="content">
   <header class="header nav-bar">
-    <div class="logo">
+    <div class="logo logo--small-pic">
       <a>
         <picture>
           <source type="image/webp" srcset="img/logo@1x.webp 1x, img/logo@2x.webp 2x">
           <!-- 1х: 52px; 2x: 104px -->
-          <img class="logo__header" src="img/logo@1x.png" srcset="img/logo@2x.png 2x"
+          <img src="img/logo@1x.png" srcset="img/logo@2x.png 2x"
                alt="Логотип компании Smart Device"
                height="52" width="52">
         </picture>
@@ -225,7 +225,7 @@
       <form class="form question-form" action="https://echo.htmlacademy.ru" method="post" enctype="multipart/form-data"
             autocomplete="off" autocapitalize="off">
         <h3>Остались вопросы? Задайте их нам!</h3>
-        <p class="form__description">Мы проконсультируем Вас бесплатно</p>
+        <p>Мы проконсультируем Вас бесплатно</p>
         <div class="form__body">
           <div class="form__required question-form__required">
             <label for="name">
@@ -276,8 +276,8 @@
           <p>1999-2018 SD Service Devices</p>
         </div>
         <div class="socials">
-          <ul class="socials__list">
-            <li class="socials__item">
+          <ul>
+            <li>
               <a href="#" class="socials__link">
                 <span class="visually-hidden">Ссылка на Фейсбук</span>
                 <svg width="27" height="27" xmlns="http://www.w3.org/2000/svg">
@@ -285,7 +285,7 @@
                 </svg>
               </a>
             </li>
-            <li class="socials__item">
+            <li>
               <a href="#" class="socials__link">
                 <span class="visually-hidden">Ссылка на Одноклассники</span>
                 <svg width="27" height="26" xmlns="http://www.w3.org/2000/svg">
@@ -293,7 +293,7 @@
                 </svg>
               </a>
             </li>
-            <li class="socials__item">
+            <li>
               <a href="#" class="socials__link">
                 <span class="visually-hidden">Ссылка на Вконтакте</span>
                 <svg width="27" height="26" xmlns="http://www.w3.org/2000/svg">
@@ -315,7 +315,7 @@
               <use xlink:href="#minus"></use>
             </svg>
           </div>
-          <ul class="accordeon__content no-js">
+          <ul class="no-js">
             <li><a href="#">О компании</a></li>
             <li><a href="#">Продукты</a></li>
             <li><a href="#">Производство печатных плат</a></li>
@@ -347,10 +347,14 @@
       </div>
     </div>
     <div class="footer__rights">
-      <p class="footer__only-desktop">Все права защищены</p>
-      <p class="footer__only-desktop">1999-2018 SD Service Devices</p>
-      <p><a href="#">Условия конфиденциальности</a></p>
-      <p><a href="#">Developed by wow studio</a></p>
+      <div class="footer__only-desktop">
+        <p>Все права защищены</p>
+        <p>1999-2018 SD Service Devices</p>
+      </div>
+      <div class="footer__not-only-desktop">
+        <p><a href="#">Условия конфиденциальности</a></p>
+        <p><a href="#">Developed by wow studio</a></p>
+      </div>
     </div>
   </footer>
 

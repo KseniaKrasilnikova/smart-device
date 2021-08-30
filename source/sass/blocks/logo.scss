@@ -11,7 +11,12 @@
   }
 }
 
-.logo__header {
+.logo img {
+    width: 52px;
+    height: 52px;
+}
+
+.logo--small-pic img {
   @media (max-width: $mobile-width-only) {
     width: 38px;
     height: 38px;
