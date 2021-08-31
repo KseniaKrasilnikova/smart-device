@@ -115,11 +115,16 @@
   }
 }
 
-.intro__nav a {
+.intro__feedback {
   display: flex;
 }
 
-a.intro__scroll {
+.intro__scroll {
+  display: flex;
+  position: absolute;
+  left: -4.8%;
+  bottom: 23%;
+
   font-weight: normal;
   font-size: 14px;
   line-height: 16px;
@@ -127,9 +132,6 @@ a.intro__scroll {
 
   opacity: 0.5;
   transform: rotate(-90deg);
-  position: absolute;
-  left: -4.8%;
-  bottom: 23%;
 
   @media (max-width: $tablet-width-only) {
     display: none;

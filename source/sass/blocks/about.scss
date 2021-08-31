@@ -75,6 +75,12 @@
 .about___text p {
   margin: 0 0 23px 0;
 
+  &:last-of-type {
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
+  }
+
   @media (max-width: $tablet-width-only) {
     margin: 0 0 26px 0;
   }
@@ -88,14 +94,8 @@
   }
 }
 
-.about__full-text {
+.about___text p:nth-child(3n) {
   @media (max-width: $tablet-width-only) {
-    display: none;
-  }
-}
-
-.about__short-text {
-  @media (min-width: $desktop-width) {
     display: none;
   }
 }
