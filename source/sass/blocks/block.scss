@@ -1,29 +1,19 @@
 .block {
-  min-height: 1153px;
-
-  background-image: url("../img/triangels-bg-grey-desktop@1x.png");
+  background-image: url("../img/triangles-desktop.svg");
   background-repeat: no-repeat;
+  background-position: 0 -108px;
   background-color: #ffffff;
 
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/triangels-bg-grey-desktop@2x.png");
-  }
 
   @media (max-width: $tablet-width-only) {
-    min-height: 1092px;
-    background-image: url("../img/triangels-bg-grey-tablet@1x.png");
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/triangels-bg-grey-tablet@2x.png");
-    }
+    background-image: url("../img/triangles-tablet.svg");
+    background-size: 559px 876px;
+    background-position: 101% 67px;
   }
 
   @media (max-width: $mobile-width-only) {
-    min-height: 1813px;
-    background-image: url("../img/triangels-bg-grey-mobile@1x.png");
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/triangels-bg-grey-mobile@2x.png");
-    }
+    background-image: url("../img/triangles-mobile.svg");
+    background-size: 767px 937px;
+    background-position: 50.8% 608px;
   }
 }
