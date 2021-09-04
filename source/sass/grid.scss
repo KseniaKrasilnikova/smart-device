@@ -1,8 +1,12 @@
 .container {
   height: inherit;
+  padding: 0 19.5%;
 
-  @media (min-width: $desktop-width) {
-    padding: 0 19.5%;
+  @media (max-width: 1500px) {
+    padding: 0 5%;
+  }
+
+  @media (max-width: $desktop-width) {
   }
 
   @media (max-width: $tablet-width-only) {
