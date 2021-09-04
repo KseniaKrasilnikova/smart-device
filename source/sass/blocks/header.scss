@@ -13,3 +13,15 @@
     min-width: 290px;
   }
 }
+
+.header__logo--cut {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.header__logo--full {
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
+}

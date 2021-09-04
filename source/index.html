@@ -20,18 +20,22 @@
 </div>
 <div class="content">
   <header class="header nav-bar">
-    <div class="logo logo--small-pic">
+    <div class="header__logo header__logo--full">
+      <a>
+      <picture>
+        <source type="image/webp" srcset="img/logo-full-light@1x.webp 1x, img/logo-full-light@2x.webp 2x">
+        <!-- 1х: 202px; 2x: 404px -->
+        <img src="img/logo-full-light@1x.png" srcset="img/logo-full-light@2x.png 2x" alt="Логотип компании Smart Device" width="202" height="52">
+      </picture>
+      </a>
+    </div>
+    <div class="header__logo header__logo--cut">
       <a>
         <picture>
-          <source type="image/webp" srcset="img/logo@1x.webp 1x, img/logo@2x.webp 2x">
-          <!-- 1х: 52px; 2x: 104px -->
-          <img src="img/logo@1x.png" srcset="img/logo@2x.png 2x" alt="Логотип компании Smart Device" height="52"
-            width="52">
+          <source type="image/webp" srcset="img/logo-cut@1x.webp 1x, img/logo-cut@2x.webp 2x">
+          <!-- 1х: 38px; 2x: 76px -->
+          <img src="img/logo-cut@1x.png" srcset="img/logo-cut@2x.png 2x" alt="Логотип компании Smart Device" width="38" height="38">
         </picture>
-        <div class="logo__sign logo__sign--none">
-          <span class="logo__text logo__text--title logo__text--light">Smart Device</span>
-          <span class="logo__text logo__text--moto">умные технологии</span>
-        </div>
       </a>
     </div>
     <div class="nav-bar__items">
@@ -279,18 +283,13 @@
   <footer class="footer">
     <div class="footer__main-block">
       <div class="footer__socials">
-        <div class="logo">
+        <div class="header__logo">
           <a>
             <picture>
-              <source type="image/webp" srcset="img/logo@1x.webp 1x, img/logo@2x.webp 2x">
-              <!-- 1х: 52px; 2x: 104px -->
-              <img src="img/logo@1x.png" srcset="img/logo@2x.png 2x" alt="Логотип компании Smart Device" height="52"
-                width="52">
+              <source type="image/webp" srcset="img/logo-full-dark@1x.webp 1x, img/logo-full-dark@2x.webp 2x">
+              <!-- 1х: 216px; 2x: 432px -->
+              <img src="img/logo-full-dark@1x.png" srcset="img/logo-full-dark@2x.png 2x" alt="Логотип компании Smart Device" width="216" height="52">
             </picture>
-            <div class="logo__sign">
-              <span class="logo__text logo__text--title logo__text--dark">Smart Device</span>
-              <span class="logo__text logo__text--moto">умные технологии</span>
-            </div>
           </a>
         </div>
         <div class="footer__tablet">
