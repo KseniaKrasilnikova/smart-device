@@ -21,6 +21,8 @@
 }
 
 .header__logo--full {
+  min-width: 202px;
+
   @media (max-width: $mobile-width-only) {
     display: none;
   }
