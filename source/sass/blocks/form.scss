@@ -161,6 +161,17 @@
   }
 }
 
+.form__check:hover,
+.form__check:focus {
+  & .form__tick {
+    border: 1px solid #000000;
+  }
+
+  & .form__note {
+    color: #000000;
+  }
+}
+
 .form__check input:checked + .form__tick {
   background-image: url("../img/check.svg");
   background-repeat: no-repeat;
