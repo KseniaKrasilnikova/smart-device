@@ -4,6 +4,8 @@
   align-items: center;
 
   @media (max-width: $mobile-width-only) {
+    padding: 0 5%;
+
     & > .accordeon__plus {
       display: block;
 
@@ -17,6 +19,7 @@
     }
 
     & + .accordeon__content {
+      padding: 0 5%;
       display: none;
 
       &.no-js {
