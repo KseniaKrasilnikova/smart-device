@@ -39,7 +39,7 @@ var setupForm = function () {
   var popupFormErrors = document.querySelectorAll('.call__form .form__comment');
 
   var validateName = function (inputElement, errorElement) {
-    var nameIsValid = /^[a-zA-Z ]{2,30}$/.test(inputElement.value);
+    var nameIsValid = /^[a-zA-ZЁёа-яА-Я ]{2,30}$/.test(inputElement.value);
     if (nameIsValid) {
       inputElement.classList.remove('form__input--invalid');
       inputElement.blur();
