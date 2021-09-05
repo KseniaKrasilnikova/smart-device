@@ -5,16 +5,7 @@
   @media (max-width: $mobile-width-only) {
     display: flex;
     flex-direction: column;
-    align-items: center;
-  }
-
-  & li {
-    border: 1px solid transparent;
-
-    &:focus,
-    &:hover, {
-      border: 1px solid #ffffff;
-    }
+    align-items: stretch;
   }
 }
 
@@ -84,18 +75,33 @@
   list-style: none;
 
   @media (max-width: $mobile-width-only) {
-    width: 290px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+  }
+
+  @media (max-width: $mobile-width-only) {
     margin: 42px 0 0 0;
   }
 }
 
 .services li {
-  width: 370px;
   height: 620px;
   margin-bottom: 20px;
 
+  border: 1px solid transparent;
+
+  &:focus,
+  &:hover, {
+    border: 1px solid #ffffff;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 31.48%;
+  }
+
   @media (max-width: $tablet-width-only) {
-    width: 720px;
+    width: 100%;
     height: 256px;
     margin-bottom: 46px;
 
@@ -114,9 +120,11 @@
 }
 
 .services a {
-  position: absolute;
+  position: relative;
   max-height: 620px;
   cursor: pointer;
+  height: 100%;
+  width: inherit;
 
   @media (max-width: $tablet-width-only) {
     max-height: 256px;
@@ -131,7 +139,7 @@
 .services__link-btn {
   position: absolute;
   z-index: 1;
-  bottom: 0;
+  bottom: 4px;
   right: 0;
   height: 63px;
   width: 63px;
