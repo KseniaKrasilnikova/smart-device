@@ -168,6 +168,11 @@
   @media (max-width: $tablet-width-only) {
     display: none;
   }
+
+  &:focus,
+  &:hover, {
+    color: $mainColor;
+  }
 }
 
 .intro__btn {
