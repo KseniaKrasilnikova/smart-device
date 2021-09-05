@@ -4,6 +4,12 @@ var setupAccordeon = function () {
   var accordeonButtons = document.getElementsByClassName('accordeon__btn');
   Array.prototype.slice.call(accordeonButtons).forEach(function (button) {
     button.addEventListener('click', function () {
+      var width = window.innerWidth
+        || document.documentElement.clientWidth
+        || document.body.clientWidth;
+      if (width > 767) {
+        return;
+      }
 
       for (var j = 0; j < accordeonButtons.length; j++) {
         if (accordeonButtons[j] !== button) {
