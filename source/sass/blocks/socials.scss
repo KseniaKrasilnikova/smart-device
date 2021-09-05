@@ -4,6 +4,15 @@
   @media (max-width: $mobile-width-only) {
     margin: 7px 0 40px 0;
   }
+
+  & a {
+    fill: #cdcdcd;
+
+    &:focus,
+    &:hover {
+      fill: $mainColor;
+    }
+  }
 }
 
 .socials ul {

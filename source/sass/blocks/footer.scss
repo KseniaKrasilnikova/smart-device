@@ -83,6 +83,11 @@
 
     padding: 0;
   }
+
+  & a:focus,
+  & a:hover {
+    color: $mainColor;
+  }
 }
 
 .footer__info h3 {
@@ -122,6 +127,11 @@
 
 .footer__info a {
   color: #1b2d37;
+}
+
+.footer__rights a:focus,
+.footer__rights a:hover {
+  color: $mainColor;
 }
 
 .footer__rights {
