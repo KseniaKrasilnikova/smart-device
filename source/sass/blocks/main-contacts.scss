@@ -1,6 +1,10 @@
 .main-contacts {
   display: flex;
+  padding-bottom: 3px;
 
+  @media (max-width: $tablet-width-only) {
+    padding-bottom: 9px;
+  }
 
   & ul {
     display: flex;
@@ -9,7 +13,7 @@
     justify-content: flex-end;
     align-items: center;
     margin: 0;
-    padding: 0 46px;
+    padding: 0 50px;
     list-style: none;
 
     @media (max-width: $tablet-width-only) {
@@ -18,12 +22,12 @@
       flex-wrap: nowrap;
       justify-content: space-between;
       align-items: center;
-      width: 80px;
+      min-width: 94px;
       padding: 0;
     }
 
-    @media (max-width: $tablet-width-only) {
-      width: 76px;
+    @media (max-width: $mobile-width-only) {
+      min-width: 85px;
     }
   }
 }
@@ -32,29 +36,68 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  min-width: 218px;
   box-sizing: border-box;
   height: 24px;
+
+  @media (min-width: $desktop-width) {
+    min-width: 210px;
+    margin-left: 11px;
+  }
+
+  @media (max-width: $tablet-width-only) {
+    padding-left: 14px;
+  }
 }
 
 .main-contacts__link {
-  display: inline-flex;
+  display: flex;
   flex-direction: row;
+  justify-content: space-between;
 
   color: #ffffff;
   line-height: 18px;
 
+  &:hover,
+  &:focus {
+    color: $mainColor;
+  }
+
   @media (max-width: $tablet-width-only) {
-    width: 100%;
+    width: 25.33px;
+    height: 18.67px;
+  }
+}
+
+.main-contacts__mail {
+  @media (min-width: $desktop-width) {
+    min-width: 135px;
+  }
+
+  @media (max-width: $tablet-width-only) {
+    width: 25.33px;
+    height: 18.67px;
+  }
+}
+
+.main-contacts__phone {
+  @media (min-width: $desktop-width) {
+    min-width: 200px;
+  }
+
+  @media (max-width: $tablet-width-only) {
+    width: 24px;
+    height: 24px;
   }
 }
 
 .main-contacts__icon {
   display: flex;
+  padding: 0 20px 0 0;
 
-  padding: 0 22px 0 0;
+  fill: $mainColor;
 
   @media (max-width: $tablet-width-only) {
+    width: 100%;
     padding: 0;
   }
 
@@ -64,8 +107,24 @@
   }
 }
 
+.main-contacts__link:hover .main-contacts__icon,
+.main-contacts__link:focus .main-contacts__icon {
+  fill: #ffffff;
+}
+
+.main-contacts__icon-phone {
+  @media (min-width: $desktop-width) {
+    padding: 0 18px 3px 0;
+  }
+}
+
 .main-contacts__text {
   @media (max-width: $tablet-width-only) {
     display: none;
   }
+}
+
+.main-contacts__icon svg {
+  width: 100%;
+  height: 100%;
 }

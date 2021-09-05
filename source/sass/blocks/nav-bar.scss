@@ -17,12 +17,12 @@
   box-sizing: border-box;
 
   @media (max-width: $tablet-width-only) {
-    margin: 22px 0;
+    margin: 20px 0;
   }
 
   @media (max-width: $mobile-width-only) {
-    margin: 17px 0;
-    padding: 0 14px;
+    margin: 13px 0;
+    padding: 0 17px;
   }
 }
 

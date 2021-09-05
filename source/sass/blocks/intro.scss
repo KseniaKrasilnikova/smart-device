@@ -44,20 +44,21 @@
   max-width: 1426px;
   width: 100%;
 
-  padding: 0 708px 0 0;
   margin-top: 317px;
   box-sizing: border-box;
   color: #ffffff;
 
-  @media (max-width: 1500px) {
-    padding: 0 39% 0 6%;
+  @media (min-width: 1450px) {
+    padding: 0 708px 0 0;
+
+    //padding: 0 39% 0 6%;
   }
 
-  @media (max-width: 1300px) {
+  @media (min-width: 1200px) and (max-width: 1450px) {
     padding: 0 40% 0 5%;
   }
 
-  @media (max-width: 1200px) {
+  @media (min-width: 1024px) and (max-width: 1200px) {
     padding: 0 39% 0 4%;
   }
 
