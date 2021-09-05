@@ -2,9 +2,11 @@
   background-image: url("../img/triangles-desktop.svg");
   background-repeat: no-repeat;
   background-position: 0 -30px;
-  padding-top: 78px;
   background-color: #ffffff;
 
+  @media (min-width: $desktop-width) {
+    padding-top: 78px;
+  }
 
   @media (max-width: $tablet-width-only) {
     background-image: url("../img/triangles-tablet.svg");

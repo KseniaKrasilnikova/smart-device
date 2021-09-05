@@ -50,8 +50,6 @@
 
   @media (min-width: 1450px) {
     padding: 0 708px 0 0;
-
-    //padding: 0 39% 0 6%;
   }
 
   @media (min-width: 1200px) and (max-width: 1450px) {
@@ -62,7 +60,14 @@
     padding: 0 39% 0 4%;
   }
 
-  @media (max-width: $tablet-width-only) {
+  @media (min-width: 900px) and (max-width: $tablet-width-only) {
+    max-width: 470px;
+    margin-top: 190px;
+    min-width: 844px;
+    padding-right: 288px;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: 899px) {
     max-width: 470px;
     margin-top: 190px;
     min-width: 594px;
@@ -215,16 +220,20 @@
     top: 14%;
   }
 
-  @media (max-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     height: auto;
+  }
+
+  @media (min-width: 320px) and (max-width: $tablet-width-only) {
+    top: 0;
+    right: 0;
   }
 }
 
 .intro__pic img {
   object-fit: cover;
 
-  @media (max-width: $tablet-width) {
-    height: auto;
-    max-height: 1009px;
+  @media (max-width: $mobile-width-only) {
+    width: 320px;
   }
 }
