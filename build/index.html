@@ -9,13 +9,17 @@
   <link rel="preload" href="fonts/PTMono-Regular.woff2" as="font" crossorigin="anonymous">
   <title>Smart Device</title>
   <script>
-    document.createElement( "picture" );
+    document.createElement('picture');
   </script>
   <script src="js/picturefill.min.js" async=""></script>
 </head>
 <body>
 <div style="display: none;">
-  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="check" viewBox="0 0 9 7">
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="blue-bg-desktop" viewBox="0 0 1920 705">
+<rect width="1920" height="670" transform="matrix(1 0 0 -1 0 670)" fill="#00B2FF"></rect>
+<path opacity="0.2" d="M1996.26 449.5L1718.01 610.148L1718.01 288.852L1996.26 449.5Z" stroke="white"></path>
+<path opacity="0.2" d="M1643.91 195.136L1818.25 94.48L1818.25 295.793L1643.91 195.136Z" stroke="white"></path>
+</symbol><symbol id="check" viewBox="0 0 9 7">
 <path d="M0.987305 2.66667L3.99907 6L8.51672 1" stroke="white"></path>
 </symbol><symbol id="cross" viewBox="0 0 17 17">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M0.146522 0.853553C-0.04874 0.658291 -0.04874 0.341709 0.146522 0.146447C0.341784 -0.0488155 0.658367 -0.0488156 0.853629 0.146447L8.27821 7.57103L15.7028 0.14645C15.8981 -0.0488124 16.2146 -0.0488125 16.4099 0.14645C16.6052 0.341712 16.6052 0.658294 16.4099 0.853556L8.98532 8.27814L16.41 15.7028C16.6052 15.8981 16.6052 16.2146 16.41 16.4099C16.2147 16.6052 15.8981 16.6052 15.7029 16.4099L8.27821 8.98525L0.853553 16.4099C0.658291 16.6052 0.341709 16.6052 0.146447 16.4099C-0.0488155 16.2146 -0.0488156 15.8981 0.146447 15.7028L7.57111 8.27814L0.146522 0.853553Z" fill="white"></path>
@@ -85,11 +89,11 @@
   <header class="header nav-bar">
     <div class="header__logo header__logo--full">
       <a>
-      <picture>
-        <source type="image/webp" srcset="img/logo-full-light@1x.webp 1x, img/logo-full-light@2x.webp 2x">
-        <!-- 1х: 202px; 2x: 404px -->
-        <img src="img/logo-full-light@1x.png" srcset="img/logo-full-light@2x.png 2x" alt="Логотип компании Smart Device" width="202" height="52">
-      </picture>
+        <picture>
+          <source type="image/webp" srcset="img/logo-full-light@1x.webp 1x, img/logo-full-light@2x.webp 2x">
+          <!-- 1х: 202px; 2x: 404px -->
+          <img src="img/logo-full-light@1x.png" srcset="img/logo-full-light@2x.png 2x" alt="Логотип компании Smart Device" width="202" height="52">
+        </picture>
       </a>
     </div>
     <div class="header__logo header__logo--cut">
@@ -152,7 +156,7 @@
           <!-- 1х: 770px; 2x: 1540 -->
           <source media="(min-width: 768px)" srcset="img/plata-tablet@1x.png 1x, img/plata-tablet@2x.png 2x">
           <!-- 1х: 320px; 2x: 640px -->
-        <img src="img/plata-mobile@1x.png" srcset="img/plata-mobile@2x.png 2x" alt="электронная печатная плата" width="1920" height="881">
+          <img src="img/plata-mobile@1x.png" srcset="img/plata-mobile@2x.png 2x" alt="электронная печатная плата" width="1920" height="881">
         </picture>
       </div>
     </section>
@@ -288,6 +292,11 @@
     </section>
     <section id="feedback" class="feedback">
       <h2 class="visually-hidden">Задать вопрос компании Smart Device</h2>
+      <div class="feedback__pic-wrapper">
+        <div class="feedback__pic">
+        </div>
+      </div>
+
       <form class="form question-form" action="https://echo.htmlacademy.ru" method="post" enctype="multipart/form-data" autocomplete="off" autocapitalize="off">
         <h3>Остались вопросы? Задайте их нам!</h3>
         <p>Мы проконсультируем Вас бесплатно</p>

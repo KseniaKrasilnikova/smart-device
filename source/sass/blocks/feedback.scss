@@ -1,24 +1,50 @@
 .feedback {
+  display: flex;
   position: relative;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+
   min-height: 671px;
+  height: inherit;
+  padding: 0 19.5%;
   background-color: $mainColor;
 
+  @media (max-width: 1500px) {
+    padding: 0 5%;
+  }
+
   @media (min-width: $desktop-width) {
-    background-image: url("../img/plane-bg-desktop@1x.png");
+    background-image: url("../img/blue-bg-desktop.svg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-y: -60px;
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/plane-bg-desktop@2x.png");
-    }
   }
 
   @media (max-width: $tablet-width-only) {
     min-height: 664px;
+    padding: 0 11.4%;
   }
 
   @media (max-width: $mobile-width-only) {
     min-height: 640px;
+    padding: 0 5%;
+  }
+}
+
+.feedback__pic-wrapper {
+  position: absolute;
+  width: 47%;
+  height: 100%;
+  left: -42px;
+  bottom: 75px;
+}
+
+.feedback__pic {
+  @media (min-width: $desktop-width) {
+    height: 100%;
+    background-image: url("../img/plane-desktop@1x.png");
+    background-repeat: no-repeat;
+    background-size: 75.6%;
+    background-position: right;
   }
 }

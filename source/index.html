@@ -10,7 +10,7 @@
   <link rel="preload" href="fonts/PTMono-Regular.woff2" as="font" crossorigin="anonymous">
   <title>Smart Device</title>
   <script>
-    document.createElement( "picture" );
+    document.createElement('picture');
   </script>
   <script src="js/picturefill.min.js" async></script>
 </head>
@@ -22,11 +22,12 @@
   <header class="header nav-bar">
     <div class="header__logo header__logo--full">
       <a>
-      <picture>
-        <source type="image/webp" srcset="img/logo-full-light@1x.webp 1x, img/logo-full-light@2x.webp 2x">
-        <!-- 1х: 202px; 2x: 404px -->
-        <img src="img/logo-full-light@1x.png" srcset="img/logo-full-light@2x.png 2x" alt="Логотип компании Smart Device" width="202" height="52">
-      </picture>
+        <picture>
+          <source type="image/webp" srcset="img/logo-full-light@1x.webp 1x, img/logo-full-light@2x.webp 2x">
+          <!-- 1х: 202px; 2x: 404px -->
+          <img src="img/logo-full-light@1x.png" srcset="img/logo-full-light@2x.png 2x"
+            alt="Логотип компании Smart Device" width="202" height="52">
+        </picture>
       </a>
     </div>
     <div class="header__logo header__logo--cut">
@@ -34,7 +35,8 @@
         <picture>
           <source type="image/webp" srcset="img/logo-cut@1x.webp 1x, img/logo-cut@2x.webp 2x">
           <!-- 1х: 38px; 2x: 76px -->
-          <img src="img/logo-cut@1x.png" srcset="img/logo-cut@2x.png 2x" alt="Логотип компании Smart Device" width="38" height="38">
+          <img src="img/logo-cut@1x.png" srcset="img/logo-cut@2x.png 2x" alt="Логотип компании Smart Device" width="38"
+            height="38">
         </picture>
       </a>
     </div>
@@ -94,7 +96,8 @@
           <source media="(min-width: 768px)"
             srcset="img/plata-tablet@1x.png 1x, img/plata-tablet@2x.png 2x">
           <!-- 1х: 320px; 2x: 640px -->
-        <img src="img/plata-mobile@1x.png" srcset="img/plata-mobile@2x.png 2x" alt="электронная печатная плата" width="1920" height="881">
+          <img src="img/plata-mobile@1x.png" srcset="img/plata-mobile@2x.png 2x" alt="электронная печатная плата"
+            width="1920" height="881">
         </picture>
       </div>
     </section>
@@ -247,6 +250,11 @@
     </section>
     <section id="feedback" class="feedback">
       <h2 class="visually-hidden">Задать вопрос компании Smart Device</h2>
+      <div class="feedback__pic-wrapper">
+        <div class="feedback__pic">
+        </div>
+      </div>
+
       <form class="form question-form" action="https://echo.htmlacademy.ru" method="post" enctype="multipart/form-data"
         autocomplete="off" autocapitalize="off">
         <h3>Остались вопросы? Задайте их нам!</h3>
@@ -288,7 +296,8 @@
             <picture>
               <source type="image/webp" srcset="img/logo-full-dark@1x.webp 1x, img/logo-full-dark@2x.webp 2x">
               <!-- 1х: 216px; 2x: 432px -->
-              <img src="img/logo-full-dark@1x.png" srcset="img/logo-full-dark@2x.png 2x" alt="Логотип компании Smart Device" width="216" height="52">
+              <img src="img/logo-full-dark@1x.png" srcset="img/logo-full-dark@2x.png 2x"
+                alt="Логотип компании Smart Device" width="216" height="52">
             </picture>
           </a>
         </div>

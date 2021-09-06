@@ -1,11 +1,14 @@
 .form {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
+  justify-content: flex-start;
   box-sizing: border-box;
 
   color: #ffffff;
+
+  @media (min-width: $desktop-width) {
+    padding-top: 93px;
+  }
 }
 
 .form h3 {
@@ -13,10 +16,19 @@
 
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: normal;
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 10px;
+  }
 }
 
 .form p {
   margin: 0 0 38px 0;
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 50px;
+    margin: 0;
+  }
 
   @media (max-width: $tablet-width-only) {
     margin: 0 0 54px;
