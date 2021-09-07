@@ -1,12 +1,9 @@
 .popup {
   display: none;
+  position: relative;
+  margin: 6.1% 0;
 
   z-index: 2;
-  margin: 0 auto;
-  position: fixed;
-  left: 50%;
-  top: 36%;
-  transform: translate(-50%, -50%);
 
   text-align: left;
   background-color: $mainColor;

@@ -388,45 +388,46 @@
       </div>
     </div>
   </footer>
-  <div class="popup-overlay overlay-call"></div>
-  <div class="popup call">
-    <div class="call__button">
-      <button type="button" aria-label="Закрыть окно">
-        <svg width="17" height="17" xmlns="http://www.w3.org/2000/svg">
-          <use xlink:href="#cross"></use>
-        </svg>
-      </button>
-    </div>
-    <div class="call__form-container">
-      <form class="form call__form" action="https://echo.htmlacademy.ru" method="post" autocomplete="off"
-        autocapitalize="off">
-        <h3>Закажите звонок</h3>
-        <div class="form__required call__required">
-          <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
-          <label for="popup-name">
-            <span class="form__comment visually-hidden" id="popup-name-error">Данные не верны</span>
-            <input id="popup-name" type="text" placeholder="Имя">
-          </label>
-          <label for="popup-phone">
-            <span class="form__comment visually-hidden" id="popup-phone-error">Данные не верны</span>
-            <input id="popup-phone" type="tel" placeholder="Телефон" minlength="17" maxlength="17">
-          </label>
-          <div class="form__textarea call__textarea">
-            <label for="call-question"></label>
-            <textarea id="call-question" name="question" rows="10" placeholder="Ваш вопрос"></textarea>
-          </div>
-        </div>
-        <div class="form__submit call__submit">
-          <input id="call-submit" type="submit" value="Отправить">
-          <div class="form__check">
-            <label for="call-check">
-              <input id="call-check" type="checkbox" checked>
-              <span class="form__tick"></span>
-              <span class="form__note call__note">Я согласен на обработку персональных данных</span>
+  <div class="popup-overlay overlay-call">
+    <div class="popup call">
+      <div class="call__button">
+        <button type="button" aria-label="Закрыть окно">
+          <svg width="17" height="17" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="#cross"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="call__form-container">
+        <form class="form call__form" action="https://echo.htmlacademy.ru" method="post" autocomplete="off"
+          autocapitalize="off">
+          <h3>Закажите звонок</h3>
+          <div class="form__required call__required">
+            <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+            <label for="popup-name">
+              <span class="form__comment visually-hidden" id="popup-name-error">Данные не верны</span>
+              <input id="popup-name" type="text" placeholder="Имя">
             </label>
+            <label for="popup-phone">
+              <span class="form__comment visually-hidden" id="popup-phone-error">Данные не верны</span>
+              <input id="popup-phone" type="tel" placeholder="Телефон" minlength="17" maxlength="17">
+            </label>
+            <div class="form__textarea call__textarea">
+              <label for="call-question"></label>
+              <textarea id="call-question" name="question" rows="10" placeholder="Ваш вопрос"></textarea>
+            </div>
           </div>
-        </div>
-      </form>
+          <div class="form__submit call__submit">
+            <input id="call-submit" type="submit" value="Отправить">
+            <div class="form__check">
+              <label for="call-check">
+                <input id="call-check" type="checkbox" checked>
+                <span class="form__tick"></span>
+                <span class="form__note call__note">Я согласен на обработку персональных данных</span>
+              </label>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
 </div>
