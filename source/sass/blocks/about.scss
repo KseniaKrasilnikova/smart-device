@@ -21,7 +21,7 @@
   background-position-y: 7px;
   background-image: url("../img/year@1x.png");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: auto 309px;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/year@2x.png");
