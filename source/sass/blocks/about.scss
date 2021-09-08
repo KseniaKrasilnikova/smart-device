@@ -3,7 +3,7 @@
   margin: 106px 0 17px 0;
 
   @media (max-width: $tablet-width-only) {
-    margin: 60px 0 31px;
+    margin: 57px 0 34px;
   }
 
   @media (max-width: $mobile-width-only) {
@@ -29,6 +29,8 @@
 
   @media (max-width: $tablet-width-only) {
     background-size: contain;
+    background-position-x: -32px;
+    background-position-y: -4px;
   }
 
   @media (max-width: $mobile-width-only) {
