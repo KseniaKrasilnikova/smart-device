@@ -1,8 +1,9 @@
 .socials {
-  margin: 20px 0;
+  height: auto;
+  margin: 21px 0;
 
   @media (max-width: $mobile-width-only) {
-    margin: 7px 0 40px 0;
+    margin: 7px 0 35px 0;
   }
 
   & a {
@@ -18,10 +19,20 @@
 .socials ul {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   list-style: none;
   margin: 0;
   padding: 0;
-  width: 112px;
-  height: 28px;
+  width: 116px;
+  min-height: 28px;
+
+  @media (max-width: $tablet-width-only) {
+    width: 111px;
+  }
+}
+
+.socials li {
+  &:nth-child(3n+2) {
+    padding: 0 15px;
+  }
 }
