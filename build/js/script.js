@@ -113,7 +113,6 @@ var setupForm = function () {
   });
 
   popupFormSubmitBtn.addEventListener('click', function (event) {
-    event.preventDefault();
     if (isPopupFormValid()) {
       saveCallFormData();
       resetForm(popupFormInputs, popupFormErrors);
@@ -189,7 +188,6 @@ var closePopupCall = function (evt) {
 };
 
 document.addEventListener('keydown', closePopupCall, true);
-// overlayCall.addEventListener('mousedown', closePopupCall, true);
 popupOutside.addEventListener('mousedown', closePopupCall, true);
 popupCloseBtn.addEventListener('mousedown', closePopupCall, true);
 popupOpenBtn.addEventListener('mousedown', openPopupCall, true);
