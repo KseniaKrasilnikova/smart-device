@@ -168,6 +168,7 @@ var setupForm = function () {
 
 var popupCall = document.querySelector('.call');
 var overlayCall = document.querySelector('.overlay-call');
+var popupOutside = document.querySelector('.popup-outside');
 var popupCloseBtn = popupCall.querySelector('.call__button button');
 var popupOpenBtn = document.querySelector('.open-popup-btn');
 
@@ -188,7 +189,8 @@ var closePopupCall = function (evt) {
 };
 
 document.addEventListener('keydown', closePopupCall, true);
-overlayCall.addEventListener('mousedown', closePopupCall, true);
+// overlayCall.addEventListener('mousedown', closePopupCall, true);
+popupOutside.addEventListener('mousedown', closePopupCall, true);
 popupCloseBtn.addEventListener('mousedown', closePopupCall, true);
 popupOpenBtn.addEventListener('mousedown', openPopupCall, true);
 
