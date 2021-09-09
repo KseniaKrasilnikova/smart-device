@@ -146,7 +146,17 @@
 }
 
 .intro__feedback {
-  display: contents;
+  display: flex;
+  align-self: flex-start;
+  margin-left: 98px;
+
+  @media (max-width: $tablet-width-only) {
+    margin-left: 50px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    margin-left: 0;
+  }
 }
 
 .intro__scroll {
@@ -191,19 +201,16 @@
 
 .intro__btn {
   max-width: 407px;
-  margin-left: 98px;
   padding: 17px 43px;
 
   @media (max-width: $tablet-width-only) {
     max-width: 379px;
-    margin-left: 50px;
     padding: 17px 30px;
   }
 
   @media (max-width: $mobile-width-only) {
     padding: 17px 5px;
     width: 287px;
-    margin: 0;
   }
 }
 
