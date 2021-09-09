@@ -1,5 +1,5 @@
 .intro {
-  height: 879px;
+  height: auto;
   display: flex;
   justify-content: center;
 
@@ -8,6 +8,7 @@
   background-size: cover;
 
   @media (min-width: $desktop-width) {
+    min-height: 879px;
     background-image: url("../img/bg-intro-desktop@1x.png");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -16,7 +17,7 @@
   }
 
   @media (max-width: $tablet-width-only) {
-    height: 686px;
+    min-height: 686px;
     background-image: url("../img/bg-intro-tablet@1x.png");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -25,8 +26,7 @@
   }
 
   @media (max-width: $mobile-width-only) {
-    height: auto;
-    padding-bottom: 69px;
+    min-height: 647px;
     background-image: url("../img/bg-intro-mobile@1x.png");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -41,15 +41,18 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  max-width: 1426px;
   width: 100%;
 
   margin-top: 317px;
   box-sizing: border-box;
   color: #ffffff;
 
-  @media (min-width: 1450px) {
-    padding: 0 708px 0 0;
+  @media (min-width: 1920px) {
+    padding: 0 46% 0 13%;
+  }
+
+  @media (min-width: 1451px) and (max-width: 1919px) {
+    padding: 0 45% 0 8%;
   }
 
   @media (min-width: 1200px) and (max-width: 1450px) {
@@ -149,7 +152,6 @@
 .intro__scroll {
   display: flex;
   position: absolute;
-  left: -2.4%;
   bottom: 23%;
 
   font-weight: normal;
@@ -160,7 +162,19 @@
   opacity: 0.5;
   transform: rotate(-90deg);
 
-  @media (max-width: 1500px) {
+  @media (min-width: 1920px) {
+    left: 11.2%;
+  }
+
+  @media (min-width: 1501px) and (max-width: 1919px) {
+    left: 5%;
+  }
+
+  @media (min-width: 1400px) and (max-width: 1500px) {
+    left: 3%;
+  }
+
+  @media (max-width: 1399px) {
     left: 0.6%;
     bottom: 16%;
   }
@@ -208,6 +222,7 @@
 .intro__pic {
   position: absolute;
   top: 0;
+  right: 0;
 
   @media (max-width: 1700px) {
     top: 6%;

@@ -1,9 +1,9 @@
 .header {
   margin: 0 auto;
 
-  @media (min-width: $desktop-width) {
-    max-width: 1426px;
-  }
+  //@media (min-width: $desktop-width) {
+  //  max-width: 1426px;
+  //}
 
   @media (max-width: $tablet-width-only) {
     max-width: 720px;

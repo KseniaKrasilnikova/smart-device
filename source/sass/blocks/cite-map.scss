@@ -1,6 +1,9 @@
 .cite-map {
   max-width: 605px;
-  margin-right: 60px;
+
+  @media (min-width: 1920px) {
+    margin-right: 60px;
+  }
 
   @media (max-width: $tablet-width-only) {
     margin-right: 26px;
