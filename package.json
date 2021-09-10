@@ -4,7 +4,7 @@
   "description": "Проект Smart Device, Акселератор, Красильникова Ксения",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.x",
-    "autoprefixer": "9.5.x",
+    "autoprefixer": "10.3.x",
     "browser-sync": "2.26.x",
     "gulp": "4.0.x",
     "gulp-csso": "^3.0.1",

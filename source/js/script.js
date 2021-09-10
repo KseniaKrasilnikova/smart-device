@@ -113,8 +113,10 @@ var setupForm = function () {
   });
 
   popupFormSubmitBtn.addEventListener('click', function (event) {
-    if (isPopupFormValid()) {
-      // saveCallFormData();
+    if (!isPopupFormValid()) {
+      event.preventDefault();
+    } else {
+      saveCallFormData();
       resetForm(popupFormInputs, popupFormErrors);
     }
   });
