@@ -22,3 +22,10 @@
   align-items: stretch;
   flex-direction: column;
 }
+
+.popup-outside {
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
