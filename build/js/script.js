@@ -117,7 +117,6 @@ var setupForm = function () {
       event.preventDefault();
     } else {
       saveCallFormData();
-      resetForm(popupFormInputs, popupFormErrors);
     }
   });
 

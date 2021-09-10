@@ -82,7 +82,7 @@
   }
 
   @media (max-width: $mobile-width-only) {
-    max-width: 470px;
+    max-width: 600px;
     margin-top: 287px;
     min-width: 288px;
     padding: 0 16px 60px 16px;
@@ -263,7 +263,11 @@
 .intro__pic img {
   object-fit: cover;
 
-  @media (max-width: $mobile-width-only) {
+  @media (min-width: 521px) and (max-width: $mobile-width-only) {
+    width: 411px;
+  }
+
+  @media (max-width: 520px) {
     width: 320px;
   }
 }
