@@ -16,11 +16,13 @@
 }
 
 .content {
+  max-width: 1920px;
   height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: stretch;
   flex-direction: column;
+  margin: 0 auto;
 }
 
 .popup-outside {

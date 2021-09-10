@@ -114,7 +114,7 @@ var setupForm = function () {
 
   popupFormSubmitBtn.addEventListener('click', function (event) {
     if (isPopupFormValid()) {
-      saveCallFormData();
+      // saveCallFormData();
       resetForm(popupFormInputs, popupFormErrors);
     }
   });
