@@ -1,6 +1,5 @@
 .footer {
-  display: flex;
-  flex-direction: column;
+  display: block;
   height: 100%;
 
   @media (min-width: $desktop-width) {
